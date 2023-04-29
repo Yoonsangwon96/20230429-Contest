@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>게시물 관리 | 관리자 센터</title>
+        <link rel="stylesheet" href="/css/admin.css" />
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="header_top">
+                <h1>제9회 산업보안 아이디어 공모전 관리자 센터</h1>
+                <div class="login_info">
+                    <p><strong>관리자</strong>님 환영합니다.</p>
+                    <button>로그아웃</button>
+                    <button>서비스 메인</button>
+                </div>
+            </div>
+            <nav>
+                <ul class="tab_list">
+                    <!-- [D] 활성화 메뉴는 on 클래스 추가 -->
+                    <li><a href="/html/admin_home.html">Home</a></li>
+                    <li><a href="/html/admin_manage.html" class="on">게시물관리</a></li>
+                    <li><a href="/html/admin_award.html">수상작</a></li>
+                </ul>
+            </nav>
+            <ul class="tabs">
+                <li class="tab-link current" data-tab="tab-1">Q & A</li>
+                <li class="tab-link" data-tab="tab-2">공지사항</li>
+                <li class="tab-link" data-tab="tab-3">FAQ</li>
+            </ul>
+        </header>
+        <main role="main">
+            <div id="tab-1" class="tab-content current">
+                <h2 class="title">Q & A</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th width="10%">등록일</th>
+                            <td>
+                                <input type="date" id="start" name="trip-start" value="2023-04-29" min="2023-04-29" max="2023-04-31" />
+                                ~
+                                <input type="date" id="start" name="trip-start" value="2023-04-29" min="2023-04-29" max="2023-04-31" />
+                            </td>
+                        </tr>
+                    </thead>
+                </table>
+                <div class="form_search">
+                    <select>
+                        <option value="제목">제목</option>
+                        <option value="내용">내용</option>
+                        <option value="제목+내용">제목+내용</option>
+                        <option value="작성자">작성자</option>
+                    </select>
+                    <form><input type="text" name="search" value="" /></form>
+                    <button class="button">검색</button>
+                    <button class="button">초기화</button>
+                </div>
+                <div class="result">
+                    <p>전체 <strong>24</strong>건의 게시물이 검색되었습니다.</p>
+
+                    <select name="pageSize" class="page_size">
+                        <option value="10">10줄씩 보기</option>
+                        <option value="20" selected="">20줄씩 보기</option>
+                        <option value="30">30줄씩 보기</option>
+                        <option value="50">50줄씩 보기</option>
+                    </select>
+                </div>
+                <table class="results">
+                    <colgroup>
+                        <col width="5%" />
+                        <col width="5%" />
+                        <col width="50%" />
+                        <col width="10%" />
+                        <col />
+                        <col />
+                        <col width="5%" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="select">
+                                <input type="checkbox" name="check1" id="check1" />
+                            </th>
+                            <th scope="col" class="number">순번</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">작성자</th>
+                            <th scope="col">등록일</th>
+                            <th scope="col">답변여부</th>
+                            <th scope="col">관리</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" name="check1" id="check1" /></td>
+                            <td>순번</td>
+                            <td class="title">제목일이삼사오육</td>
+                            <td>작성자작성자</td>
+                            <td>23-02-10</td>
+                            <td class="status isReplied">답변완료</td>
+                            <td><a class="delete">삭제</a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="check1" id="check1" /></td>
+                            <td>순번</td>
+                            <td class="title">제목일이삼사오육</td>
+                            <td>작성자작성자</td>
+                            <td>23-02-10</td>
+                            <td class="status isReplied">답변완료</td>
+                            <td><a class="delete">삭제</a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="check1" id="check1" /></td>
+                            <td>순번</td>
+                            <td class="title">제목일이삼사오육</td>
+                            <td>작성자작성자</td>
+                            <td>23-02-10</td>
+                            <td class="status isReplied">답변완료</td>
+                            <td><a class="delete">삭제</a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="check1" id="check1" /></td>
+                            <td>순번</td>
+                            <td class="title">제목일이삼사오육</td>
+                            <td>작성자작성자</td>
+                            <td>23-02-10</td>
+                            <td class="status isReplied">답변완료</td>
+                            <td><a class="delete">삭제</a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="check1" id="check1" /></td>
+                            <td>순번</td>
+                            <td class="title">제목일이삼사오육</td>
+                            <td>작성자작성자</td>
+                            <td>23-02-10</td>
+                            <td class="status isReplied">답변완료</td>
+                            <td><a class="delete">삭제</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <footer class="table_footer">
+                    <button class="btn_delete_select">선택 삭제</button>
+                    <div class="paginator">
+                        <a href="#" class="prev"><</a>
+                        <a href="#" class="page active">1</a>
+                        <a href="#" class="page">2</a>
+                        <a href="#" class="page">3</a>
+                        <a href="#" class="page disabled">4</a>
+                        <a href="#" class="page disabled">5</a>
+                        <a href="#" class="next">></a>
+                    </div>
+                </footer>
+            </div>
+            <div id="tab-2" class="tab-content">
+                <h2 class="title">공지사항</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th width="10%">등록일</th>
+                            <td>
+                                <input type="date" id="start" name="trip-start" value="2023-04-29" min="2023-04-29" max="2023-04-31" />
+                                ~
+                                <input type="date" id="start" name="trip-start" value="2023-04-29" min="2023-04-29" max="2023-04-31" />
+                            </td>
+                        </tr>
+                    </thead>
+                </table>
+                <div class="form_search">
+                    <select>
+                        <option value="제목">제목</option>
+                        <option value="내용">내용</option>
+                        <option value="제목+내용">제목+내용</option>
+                        <option value="작성자">작성자</option>
+                    </select>
+                    <form><input type="text" name="search" value="" /></form>
+                    <button class="button">검색</button>
+                    <button class="button">초기화</button>
+                </div>
+                <div class="result">
+                    <p>전체 <strong>24</strong>건의 게시물이 검색되었습니다.</p>
+
+                    <select name="pageSize" class="page_size">
+                        <option value="10">10줄씩 보기</option>
+                        <option value="20" selected="">20줄씩 보기</option>
+                        <option value="30">30줄씩 보기</option>
+                        <option value="50">50줄씩 보기</option>
+                    </select>
+                </div>
+                <table class="results">
+                    <colgroup>
+                        <col width="5%" />
+                        <col width="5%" />
+                        <col width="50%" />
+                        <col width="10%" />
+                        <col />
+                        <col />
+                        <col width="5%" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="select">
+                                <input type="checkbox" name="check1" id="check1" />
+                            </th>
+                            <th scope="col" class="number">순번</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">작성자</th>
+                            <th scope="col">등록일</th>
+                            <th scope="col">답변여부</th>
+                            <th scope="col">관리</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" name="check1" id="check1" /></td>
+                            <td>순번</td>
+                            <td class="title">제목일이삼사오육</td>
+                            <td>작성자작성자</td>
+                            <td>23-02-10</td>
+                            <td class="status isReplied">답변완료</td>
+                            <td><a class="delete">삭제</a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="check1" id="check1" /></td>
+                            <td>순번</td>
+                            <td class="title">제목일이삼사오육</td>
+                            <td>작성자작성자</td>
+                            <td>23-02-10</td>
+                            <td class="status isReplied">답변완료</td>
+                            <td><a class="delete">삭제</a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="check1" id="check1" /></td>
+                            <td>순번</td>
+                            <td class="title">제목일이삼사오육</td>
+                            <td>작성자작성자</td>
+                            <td>23-02-10</td>
+                            <td class="status isReplied">답변완료</td>
+                            <td><a class="delete">삭제</a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="check1" id="check1" /></td>
+                            <td>순번</td>
+                            <td class="title">제목일이삼사오육</td>
+                            <td>작성자작성자</td>
+                            <td>23-02-10</td>
+                            <td class="status isReplied">답변완료</td>
+                            <td><a class="delete">삭제</a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="check1" id="check1" /></td>
+                            <td>순번</td>
+                            <td class="title">제목일이삼사오육</td>
+                            <td>작성자작성자</td>
+                            <td>23-02-10</td>
+                            <td class="status isReplied">답변완료</td>
+                            <td><a class="delete">삭제</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <footer class="table_footer">
+                    <button class="btn_delete_select">선택 삭제</button>
+                    <div class="paginator">
+                        <a href="#" class="prev"><</a>
+                        <a href="#" class="page active">1</a>
+                        <a href="#" class="next">></a>
+                    </div>
+                    <button class="btn_write">작성하기</button>
+                </footer>
+            </div>
+            <div id="tab-3" class="tab-content">
+                <h2 class="title">FAQ</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th width="10%">등록일</th>
+                            <td>
+                                <input type="date" id="start" name="trip-start" value="2023-04-29" min="2023-04-29" max="2023-04-31" />
+                                ~
+                                <input type="date" id="start" name="trip-start" value="2023-04-29" min="2023-04-29" max="2023-04-31" />
+                            </td>
+                        </tr>
+                    </thead>
+                </table>
+                <div class="form_search">
+                    <select>
+                        <option value="제목">제목</option>
+                        <option value="내용">내용</option>
+                        <option value="제목+내용">제목+내용</option>
+                        <option value="작성자">작성자</option>
+                    </select>
+                    <form><input type="text" name="search" value="" /></form>
+                    <button class="button">검색</button>
+                    <button class="button">초기화</button>
+                </div>
+                <div class="result">
+                    <p>전체 <strong>24</strong>건의 게시물이 검색되었습니다.</p>
+
+                    <select name="pageSize" class="page_size">
+                        <option value="10">10줄씩 보기</option>
+                        <option value="20" selected="">20줄씩 보기</option>
+                        <option value="30">30줄씩 보기</option>
+                        <option value="50">50줄씩 보기</option>
+                    </select>
+                </div>
+                <table class="results">
+                    <colgroup>
+                        <col width="5%" />
+                        <col width="5%" />
+                        <col width="50%" />
+                        <col width="10%" />
+                        <col />
+                        <col />
+                        <col width="5%" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="select">
+                                <input type="checkbox" name="check1" id="check1" />
+                            </th>
+                            <th scope="col" class="number">순번</th>
+                            <th scope="col">제목</th>
+                            <th scope="col">작성자</th>
+                            <th scope="col">등록일</th>
+                            <th scope="col">답변여부</th>
+                            <th scope="col">관리</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" name="check1" id="check1" /></td>
+                            <td>순번</td>
+                            <td class="title">제목일이삼사오육</td>
+                            <td>작성자작성자</td>
+                            <td>23-02-10</td>
+                            <td class="status isReplied">답변완료</td>
+                            <td><a class="delete">삭제</a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="check1" id="check1" /></td>
+                            <td>순번</td>
+                            <td class="title">제목일이삼사오육</td>
+                            <td>작성자작성자</td>
+                            <td>23-02-10</td>
+                            <td class="status isReplied">답변완료</td>
+                            <td><a class="delete">삭제</a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="check1" id="check1" /></td>
+                            <td>순번</td>
+                            <td class="title">제목일이삼사오육</td>
+                            <td>작성자작성자</td>
+                            <td>23-02-10</td>
+                            <td class="status isReplied">답변완료</td>
+                            <td><a class="delete">삭제</a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="check1" id="check1" /></td>
+                            <td>순번</td>
+                            <td class="title">제목일이삼사오육</td>
+                            <td>작성자작성자</td>
+                            <td>23-02-10</td>
+                            <td class="status isReplied">답변완료</td>
+                            <td><a class="delete">삭제</a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="check1" id="check1" /></td>
+                            <td>순번</td>
+                            <td class="title">제목일이삼사오육</td>
+                            <td>작성자작성자</td>
+                            <td>23-02-10</td>
+                            <td class="status isReplied">답변완료</td>
+                            <td><a class="delete">삭제</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <footer class="table_footer">
+                    <button class="btn_delete_select">선택 삭제</button>
+                    <div class="paginator">
+                        <a href="#" class="prev"><</a>
+                        <a href="#" class="page active">1</a>
+                        <a href="#" class="next">></a>
+                    </div>
+                    <button class="btn_write">작성하기</button>
+                </footer>
+            </div>
+        </main>
+
+        <script>
+            $(document).ready(function () {
+                $("ul.tabs li").click(function () {
+                    var tab_id = $(this).attr("data-tab");
+
+                    $("ul.tabs li").removeClass("current");
+                    $(".tab-content").removeClass("current");
+
+                    $(this).addClass("current");
+                    $("#" + tab_id).addClass("current");
+                });
+            });
+        </script>
+    </body>
+</html>

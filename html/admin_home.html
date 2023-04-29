@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>관리자 센터</title>
+        <link rel="stylesheet" href="/css/admin.css" />
+    </head>
+    <body>
+        <header>
+            <div class="header_top">
+                <h1>제9회 산업보안 아이디어 공모전 관리자 센터</h1>
+                <div class="login_info">
+                    <p><strong>관리자</strong>님 환영합니다.</p>
+                    <button>로그아웃</button>
+                    <button>서비스 메인</button>
+                </div>
+            </div>
+            <nav>
+                <ul class="tab_list">
+                    <!-- [D] 활성화 메뉴는 on 클래스 추가 -->
+                    <li><a href="/html/admin_home.html" class="on">Home</a></li>
+                    <li><a href="/html/admin_manage.html">게시물관리</a></li>
+                    <li><a href="/html/admin_award.html">수상작</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main role="main">
+            <h2 class="title">접수/투표일정 관리</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th width="20%">공모전 접수관리</th>
+                        <td>
+                            <input type="date" id="start" name="trip-start" value="2023-04-29" min="2023-04-29" max="2023-04-31" />
+                            <select name="hour">
+                                <option value="00">00</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                            </select>
+                            :
+                            <select name="minute">
+                                <option value="00">00</option>
+                                <option value="05">05</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="25">25</option>
+                                <option value="30">30</option>
+                                <option value="35">35</option>
+                                <option value="40">40</option>
+                                <option value="45">45</option>
+                                <option value="50">50</option>
+                                <option value="55">55</option>
+                            </select>
+                            ~ <input type="date" id="start" name="trip-start" value="2023-04-29" min="2023-04-29" max="2023-04-31" />
+                            <select name="hour">
+                                <option value="00">00</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                            </select>
+                            :
+                            <select name="minute">
+                                <option value="00">00</option>
+                                <option value="05">05</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="25">25</option>
+                                <option value="30">30</option>
+                                <option value="35">35</option>
+                                <option value="40">40</option>
+                                <option value="45">45</option>
+                                <option value="50">50</option>
+                                <option value="55">55</option>
+                            </select>
+                        </td>
+                        <td rowspan="2" width="10%"><button class="btn_save">저장하기</button></td>
+                    </tr>
+                    <tr>
+                        <th>접수기간 메시지</th>
+                        <td class="message">
+                            <input type="text" value="접수 기간 마감 / 22.12.12 ~ 23.1.29" />
+                            <p class="notice">접수기간이 아닐경우 출력되는 메시지입니다.</p>
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+            <h3 class="title">게시물 현황</h3>
+            <table class="table table_current">
+                <thead>
+                    <tr>
+                        <th>Q&A</th>
+                        <th>공지사항</th>
+                        <th>FAQ</th>
+                        <th>작품접수관리</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>전체 등록수 : 24건 <br />오늘 등록수 : 0건</td>
+                        <td>전체 등록수 : 24건 <br />오늘 등록수 : 0건</td>
+                        <td>전체 등록수 : 24건 <br />오늘 등록수 : 0건</td>
+                        <td>전체 등록수 : 24건 <br />오늘 등록수 : 0건</td>
+                    </tr>
+                </tbody>
+            </table>
+        </main>
+    </body>
+</html>

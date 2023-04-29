@@ -98,10 +98,8 @@ textarea:focus {
 
 input {
     border: 0;
-    -webkit-appearance: none; /* input 기본 외형 삭제 */
 
-    &[type="file"],
-    &[type="checkbox"] {
+    &[type="file"] {
         display: none;
     }
 
