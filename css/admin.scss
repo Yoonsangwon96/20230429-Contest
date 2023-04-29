@@ -1,0 +1,86 @@
+@charset 'utf-8';
+
+@import "_reset.scss";
+
+// 로그인 화면
+.area_login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+
+    .wrap_login {
+        width: 600px;
+    }
+
+    .title {
+        margin-bottom: 20px;
+        font-size: 20px;
+        color: #000;
+        text-align: left;
+    }
+
+    form {
+        padding: 0 20px;
+    }
+
+    label {
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    input {
+        display: inline-block;
+        width: 100%;
+        margin: 8px 0;
+        padding: 12px 20px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+
+        + label {
+            margin-top: 10px;
+        }
+
+        &:focus {
+            border-width: 2px;
+            border-color: #000;
+        }
+
+        &::placeholder {
+            font-size: 14px;
+        }
+    }
+
+    .area_button {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        padding: 0 35px;
+
+        > a {
+            display: flex;
+            flex: 1 1 50%;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 15px;
+            border-radius: 5px;
+            color: #fff;
+            text-align: center;
+        }
+    }
+
+    .btn_login {
+        margin-right: 20px;
+        background-color: #04aa6d;
+    }
+
+    .btn_main {
+        background-color: #f44336;
+    }
+}
