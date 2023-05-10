@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>접수하기 | 바이오헬스산업</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        <title>접수확인 | 한국산업기술보호협회</title>
         <!-- 나눔스퀘어 웹 폰트 -->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css" />
         <link rel="stylesheet" href="/css/style.css" />
@@ -12,10 +13,9 @@
     </head>
     <body>
         <header>
-            <h1 class="blind">바이오헬스산업 홍보 콘텐츠 공모전 웹사이트</h1>
+            <h1 class="blind">산업보안 아이디어 공모전 웹사이트</h1>
             <div class="header_top">
                 <div class="content_inner">
-                    <!-- 씽유 - 주최사 로고 -->
                     <a href="https://thinkyou.co.kr/" target="_blank" class="link_thinkyou">씽유 - 대한민국 공모전의 중심</a>
                 </div>
             </div>
@@ -24,10 +24,7 @@
                     <h2 class="blind">공모전 관련 메뉴</h2>
                     <div class="gnb_left">
                         <a href="#;" target="_blank" class="link_header_banner">
-                            <img src="https://biosong-promotion.s3.ap-northeast-2.amazonaws.com/logo_bio.png" alt="오송첨단의료산업진흥재단" />
-                        </a>
-                        <a href="http://www.mohw.go.kr/react/index.jsp" target="_blank" class="link_header_banner">
-                            <img src="https://biosong-promotion.s3.ap-northeast-2.amazonaws.com/logo_bogun.png" alt="보건복지부" />
+                            <img src="../img/logo_kait.png" alt="오송첨단의료산업진흥재단" />
                         </a>
                     </div>
                     <ul class="gnb_menu">
@@ -61,18 +58,30 @@
                 </div>
             </nav>
         </header>
-        <main role="main">
-            <div class="sub_banner">
-                <div class="content_inner"></div>
-            </div>
-            <div class="content_inner">
-                <!-- 서브페이지 컨텐츠 영역 -->
-                <div class="sub_content">
-                    <h3 class="title">공모요강</h3>
-                    <div class="content">공모요강 임시</div>
+        <main role="main" class="sub_content">
+            <div class="content_top">
+                <div class="content_inner">
+                    <!-- 서브페이지 - 상단 배너 -->
+                    <img src="../img/sub_top_image.png" alt="내가 담은 산업보안 이야기, 공모기간 2023. 06. 01 ~ 08. 31, 공모 접수 기간은 외부 환경 및 참가작 수준에 따라 변경 가능" />
                 </div>
             </div>
-            <!-- 서브페이지 상단 배너 -->
+            <div class="content_inner">
+                <h3 class="blind">메인 콘텐츠 - 제9회 산업보안 아이디어 공모전</h3>
+                <h4 class="title check">접수확인</h4>
+                <div class="content_wrap">
+                    <p class="text">이름, 휴대폰, 비밀번호로 접수하신 내용을 확인할 수 있습니다.</p>
+                    <p class="text">수정은 불가하며, 수정이 필요할 경우 기존 내용 삭제 후 재접수 바랍니다.</p>
+                    <em class="desc">* 접수 확인 불가시 Q&A에 글 남겨주시거나 02-2233-4016로 연락주시기 바랍니다.</em>
+                    <form>
+                        <div class="form_container">
+                            <input type="text" maxlength="25" name="name" placeholder="이름 입력" value="" />
+                            <input type="text" maxlength="13" name="phoneNumber" placeholder="휴대폰 입력" value="" />
+                            <input type="password" maxlength="50" name="password" placeholder="비밀번호 입력" value="111111" />
+                            <a href="#;" class="button">확인하기</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </main>
         <footer>
             <div class="content_inner">
@@ -83,10 +92,9 @@
                 </div>
                 <ul class="footer_link_list">
                     <li>
-                        <a target="_blank" href="https://www.kbiohealth.kr/"><img class="grey" src="https://biosong-promotion.s3.ap-northeast-2.amazonaws.com/logo_bio.png" alt="오송첨단의료산업진흥재단" /></a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="http://www.mohw.go.kr/react/index.jsp"><img class="grey" src="https://biosong-promotion.s3.ap-northeast-2.amazonaws.com/logo_bogun.png" alt="보건복지부" /></a>
+                        <a target="_blank" href="https://www.kbiohealth.kr/">
+                            <img src="../img/logo_kait.png" alt="오송첨단의료산업진흥재단" />
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -104,5 +112,15 @@
                 }
             );
         });
+
+        function showNotice() {
+            var notice = document.getElementById("notice");
+            notice.style.display = "block";
+        }
+
+        function hideNotice() {
+            var notice = document.getElementById("notice");
+            notice.style.display = "none";
+        }
     </script>
 </html>

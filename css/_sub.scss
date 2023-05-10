@@ -1,35 +1,107 @@
 // 서브 페이지 사용 스타일
 .sub_content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 100px 0 200px;
+    text-align: center;
 
-    .title {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 50px;
-        padding: 0 25px;
-        margin-bottom: 30px;
-        background-color: #3451a3;
-        font-family: "GmarketSans";
-        font-size: 26px;
-        font-weight: normal;
-        color: #fff;
-        line-height: 50px;
-        box-sizing: border-box;
-        letter-spacing: -0.5px;
+    .content_top {
+        background: #e2edf9;
     }
 
-    .content {
-        width: 100%;
-        height: 500px;
-        border: 5px solid #3552a4;
+    > .content_inner {
+        padding: 100px 0;
+    }
+
+    .title {
+        display: inline-block;
+        width: 134px;
+        height: 44px;
+        vertical-align: top;
+        text-indent: -9999em;
+
+        &.about {
+            background: url(../img/title_about.png) no-repeat;
+        }
+
+        &.application {
+            background: url(../img/title_application.png) no-repeat;
+        }
+
+        &.check {
+            background: url(../img/title_check.png) no-repeat;
+        }
+    }
+
+    .content_wrap {
+        margin-top: 50px;
+        padding: 48px 0;
+        border: 2px solid #e2edf9;
+    }
+
+    .btn_video,
+    .btn_audio {
+        display: inline-block;
+        width: 227px;
+        height: 100px;
+        margin: 57px 0;
+        vertical-align: top;
+        cursor: pointer;
+    }
+
+    .btn_video {
+        background: url(../img/banner_video.png) no-repeat;
+
+        + .btn_audio {
+            margin-left: 34px;
+        }
+    }
+
+    .btn_audio {
+        background: url(../img/banner_audio.png) no-repeat;
     }
 }
 
-.sub_banner {
-    height: 200px;
-    background-color: #3452a4;
+.content_wrap {
+    .text {
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1.5;
+        letter-spacing: -1px;
+
+        + .desc {
+            display: inline-block;
+            margin-top: 15px;
+        }
+    }
+
+    .desc {
+        font-size: 15px;
+    }
+}
+
+.form_container {
+    margin-top: 40px;
+
+    > input {
+        display: block;
+        width: 250px;
+        height: 40px;
+        margin: 0 auto;
+        padding-left: 10px;
+        border: 1px solid gray;
+
+        + input {
+            margin-top: 5px;
+        }
+    }
+
+    .button {
+        display: inline-block;
+        width: 250px;
+        height: 40px;
+        margin-top: 10px;
+        background: #0753a4;
+        font-weight: bold;
+        color: #fff;
+        line-height: 40px;
+        vertical-align: top;
+    }
 }
