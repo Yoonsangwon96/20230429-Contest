@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
         <title>메인 | 바이오헬스산업</title>
         <!-- 나눔스퀘어 웹 폰트 -->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css" />
@@ -15,7 +16,6 @@
             <h1 class="blind">바이오헬스산업 홍보 콘텐츠 공모전 웹사이트</h1>
             <div class="header_top">
                 <div class="content_inner">
-                    <!-- 씽유 - 주최사 로고 -->
                     <a href="https://thinkyou.co.kr/" target="_blank" class="link_thinkyou">씽유 - 대한민국 공모전의 중심</a>
                 </div>
             </div>
@@ -24,10 +24,7 @@
                     <h2 class="blind">공모전 관련 메뉴</h2>
                     <div class="gnb_left">
                         <a href="#;" target="_blank" class="link_header_banner">
-                            <img src="https://biosong-promotion.s3.ap-northeast-2.amazonaws.com/logo_bio.png" alt="오송첨단의료산업진흥재단" />
-                        </a>
-                        <a href="http://www.mohw.go.kr/react/index.jsp" target="_blank" class="link_header_banner">
-                            <img src="https://biosong-promotion.s3.ap-northeast-2.amazonaws.com/logo_bogun.png" alt="보건복지부" />
+                            <img src="../img/logo_kait.png" alt="오송첨단의료산업진흥재단" />
                         </a>
                     </div>
                     <ul class="gnb_menu">
@@ -65,23 +62,27 @@
             <div class="content_inner">
                 <h3 class="blind">메인 콘텐츠 - 제9회 산업보안 아이디어 공모전</h3>
                 <!-- 메인 오브제 포스터 이미지 -->
-                <img src="" alt="" />
+                <div class="content_main_image">
+                    <img src="../img/main_text.png" alt="내가 담은 산업보안 이야기, 공모기간 2023. 06. 01 ~ 08. 31, 공모 접수 기간은 외부 환경 및 참가작 수준에 따라 변경 가능" />
+                </div>
                 <div class="content_right">
-                    <section>
+                    <section class="content_link_wrap">
                         <h4 class="blind">접수 관련 링크 목록</h4>
                         <ul class="area_content_link">
-                            <li>
-                                <a href="#;">작품<br />접수</a>
+                            <li class="banner_write">
+                                <a href="#;">접수하기</a>
                             </li>
-                            <li>
-                                <a href="#;">접수<br />확인</a>
+                            <li class="banner_check">
+                                <a href="#;">접수확인</a>
                             </li>
-                            <li><a href="#;">Q&A</a></li>
+                            <li class="banner_qna"><a href="#;">Q&A</a></li>
+                            <li class="banner_download">
+                                <a href="#;">신청서 다운로드</a>
+                            </li>
                         </ul>
-                        <!-- 제 8회 수상작 들어갈 자리 - 디자인 미정 -->
-                        <!-- <div class="link_banner">
-                            <a href="#;">디자인 미정</a>
-                        </div> -->
+                        <div class="link_banner">
+                            <a href="#;">제 8회 수상작 보기 (매년 공모분야 변경)</a>
+                        </div>
                     </section>
                     <section class="area_notice">
                         <h4 class="title">공지사항</h4>
@@ -97,12 +98,9 @@
                                 <em class="date">23-04-29</em>
                             </li>
                             <li>
-                                <button type="button" onclick="showNotice()">예비 수상작</button>
+                                <button type="button" onclick="showNotice()">클릭하면 레이어가 뜹니다.</button>
                                 <em class="date">23-04-29</em>
                             </li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
                         </ol>
                     </section>
                 </div>
@@ -136,10 +134,9 @@
                 </div>
                 <ul class="footer_link_list">
                     <li>
-                        <a target="_blank" href="https://www.kbiohealth.kr/"><img class="grey" src="https://biosong-promotion.s3.ap-northeast-2.amazonaws.com/logo_bio.png" alt="오송첨단의료산업진흥재단" /></a>
-                    </li>
-                    <li>
-                        <a target="_blank" href="http://www.mohw.go.kr/react/index.jsp"><img class="grey" src="https://biosong-promotion.s3.ap-northeast-2.amazonaws.com/logo_bogun.png" alt="보건복지부" /></a>
+                        <a target="_blank" href="https://www.kbiohealth.kr/">
+                            <img src="../img/logo_kait.png" alt="오송첨단의료산업진흥재단" />
+                        </a>
                     </li>
                 </ul>
             </div>
