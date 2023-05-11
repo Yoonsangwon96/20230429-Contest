@@ -76,6 +76,7 @@ body {
     margin-right: -58px; /* 디자인 맞춤 */
     margin-left: auto;
     font-size: 20px;
+    z-index: 10;
 
     > li {
         display: flex;
