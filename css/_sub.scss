@@ -28,6 +28,18 @@
         &.check {
             background: url(../img/title_check.png) no-repeat;
         }
+
+        &.notice {
+            background: url(../img/title_notice.png) no-repeat;
+        }
+
+        &.qna {
+            background: url(../img/title_qna.png) no-repeat;
+        }
+
+        &.faq {
+            background: url(../img/title_faq.png) no-repeat;
+        }
     }
 
     .content_wrap {
@@ -57,9 +69,71 @@
     .btn_audio {
         background: url(../img/banner_audio.png) no-repeat;
     }
+
+    .btn_search,
+    .btn_write,
+    .btn_submit {
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 1000px;
+        margin: 40px auto 0;
+    }
+
+    .pagination a {
+        margin: 0 4px;
+        padding: 8px 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        color: #555;
+        text-decoration: none;
+    }
+
+    .pagination a:hover:not(.active) {
+        background-color: #f2f2f2;
+    }
+
+    .pagination .active {
+        border: 1px solid #007bff;
+        background-color: #007bff;
+        color: white;
+    }
+
+    .btn_write {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: 12px 30px;
+    }
+
+    .notice_text {
+        padding-left: 100px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .point_color {
+        display: inline-block;
+        color: #8f0506;
+        vertical-align: top;
+    }
 }
 
 .content_wrap {
+    position: relative;
+
     .text {
         font-size: 22px;
         font-weight: bold;
@@ -103,5 +177,251 @@
         color: #fff;
         line-height: 40px;
         vertical-align: top;
+    }
+}
+
+.filter_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 100px;
+}
+
+.notice_filter {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #eee;
+    font-size: 16px;
+    cursor: pointer;
+
+    + .search_bar {
+        margin-left: 10px;
+    }
+}
+
+.search_bar {
+    display: flex;
+    width: 300px;
+
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        font-size: 16px;
+    }
+
+    + .btn_search {
+        margin-left: 5px;
+    }
+}
+
+.table_notice {
+    width: 100%;
+    max-width: 1000px;
+    margin: 50px auto 0;
+    border-collapse: collapse;
+    border-bottom: 2px solid #333;
+
+    th,
+    td {
+        padding: 10px;
+        text-align: left;
+
+        &.number {
+            width: 60px;
+        }
+
+        &.table_title {
+            width: 70%;
+        }
+
+        &.date {
+            width: 120px;
+        }
+    }
+
+    tr {
+        &:first-child {
+            th {
+                border-top: 2px solid #333;
+                border-bottom: 1px solid #333;
+                background-color: #eee;
+                font-weight: bold;
+                color: #333;
+            }
+        }
+    }
+
+    tbody {
+        tr {
+            &:nth-child(odd) {
+                background-color: #f2f2f2;
+            }
+
+            &:hover {
+                background-color: #ddd;
+            }
+        }
+    }
+
+    .table_title {
+        overflow: hidden;
+
+        button {
+            overflow: hidden;
+            width: 100%;
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            color: #333;
+            line-height: 18px;
+            text-align: left;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .state {
+        width: 10%;
+    }
+
+    .box_state {
+        background-color: #ddd;
+        line-height: 1;
+        text-align: center;
+
+        &.on {
+            background-color: #c82254;
+            color: #fff;
+        }
+    }
+}
+
+.table_answer {
+    width: 1000px;
+    margin: 40px auto 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #eee;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    tbody {
+        background-color: #fff;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+
+    th {
+        width: 20%;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    td {
+        width: 80%;
+    }
+
+    textarea {
+        width: 100%;
+        height: 300px;
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        resize: none;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    ~ .btn_cancel,
+    ~ .btn_submit {
+        width: 180px;
+        height: 50px;
+        margin-top: 20px;
+        cursor: pointer;
+        box-sizing: border-box;
+    }
+
+    ~ .btn_cancel {
+        border: 1px solid #007bff;
+        border-radius: 5px;
+        color: #007bff;
+    }
+}
+
+.faq_list {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+    border: 1px solid #333;
+    border-right: none;
+    border-left: none;
+    text-align: left;
+
+    > li {
+        position: relative;
+        padding-left: 50px;
+        border-bottom: 1px solid #ccc;
+    }
+}
+
+.faq_title {
+    position: relative;
+    padding: 20px 0;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:before {
+        position: absolute;
+        top: 50%;
+        left: -30px;
+        font-size: 20px;
+        font-weight: bold;
+        transform: translateY(-50%);
+        content: "Q";
+    }
+}
+
+.faq_content {
+    display: none;
+    position: relative;
+    margin-bottom: 10px;
+    padding: 20px 10px;
+    background-color: #eee;
+    line-height: 1.2;
+
+    &:before {
+        position: absolute;
+        top: 50%;
+        left: -30px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #007bff;
+        transform: translateY(-50%);
+        content: "A";
     }
 }

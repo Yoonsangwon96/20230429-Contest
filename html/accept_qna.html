@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+        <title>Q&A | 한국산업기술보호협회</title>
+        <!-- 나눔스퀘어 웹 폰트 -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1 class="blind">산업보안 아이디어 공모전 웹사이트</h1>
+            <div class="header_top">
+                <div class="content_inner">
+                    <a href="https://thinkyou.co.kr/" target="_blank" class="link_thinkyou">씽유 - 대한민국 공모전의 중심</a>
+                </div>
+            </div>
+            <nav class="gnb">
+                <div class="content_inner">
+                    <h2 class="blind">공모전 관련 메뉴</h2>
+                    <div class="gnb_left">
+                        <a href="#;" target="_blank" class="link_header_banner">
+                            <img src="../img/logo_kait.png" alt="오송첨단의료산업진흥재단" />
+                        </a>
+                    </div>
+                    <ul class="gnb_menu">
+                        <li><a href="/html/home.html">HOME</a></li>
+                        <li>
+                            <a href="/html/about.html">공모요강</a>
+                        </li>
+                        <li>
+                            <a href="#;">접수 및 확인</a>
+                            <ul class="sub_menu">
+                                <li><a href="#;">작품접수</a></li>
+                                <li><a href="#;">작품확인</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#;">커뮤니티</a>
+                            <ul class="sub_menu">
+                                <li><a href="#;">공지사항</a></li>
+                                <li><a href="#;">Q&A</a></li>
+                                <li><a href="#;">FAQ</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#;">수상작</a>
+                            <ul class="sub_menu">
+                                <li><a href="#;">제 8회 수상작 보기</a></li>
+                                <li><a href="#;">제 9회 수상작 보기</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main role="main" class="sub_content">
+            <div class="content_top">
+                <div class="content_inner">
+                    <!-- 서브페이지 - 상단 배너 -->
+                    <img src="../img/sub_top_image.png" alt="내가 담은 산업보안 이야기, 공모기간 2023. 06. 01 ~ 08. 31, 공모 접수 기간은 외부 환경 및 참가작 수준에 따라 변경 가능" />
+                </div>
+            </div>
+            <div class="content_inner">
+                <h3 class="blind">메인 콘텐츠 - 제9회 산업보안 아이디어 공모전</h3>
+                <h4 class="title qna">Q&A</h4>
+                <div class="content_wrap">
+                    <div class="filter_wrap">
+                        <select class="notice_filter">
+                            <option value="title" selected>제목</option>
+                            <option value="content">내용</option>
+                            <option value="title_content">제목 + 내용</option>
+                        </select>
+                        <div class="search_bar">
+                            <input type="text" placeholder="검색어를 입력하세요" />
+                        </div>
+                        <button class="btn_search">검색</button>
+                    </div>
+
+                    <table class="table_notice">
+                        <thead>
+                            <tr>
+                                <th class="number">번호</th>
+                                <th class="table_title">제목</th>
+                                <th class="date">등록일</th>
+                                <th class="state">상태</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="number"><span>1</span></td>
+                                <td class="table_title">
+                                    <button>
+                                        <span>예비 수상작 결과발표</span>
+                                        <img class="lock icon" src="https://biosong-promotion.s3.ap-northeast-2.amazonaws.com/icon_lock.png" alt="lock" />
+                                    </button>
+                                </td>
+                                <td>23-02-10</td>
+                                <td class="box_state">대기중</td>
+                            </tr>
+                            <tr>
+                                <td class="number"><span>2</span></td>
+                                <td class="table_title">
+                                    <button>
+                                        <span>접수기간이 연장 안내</span>
+                                        <img class="lock icon" src="https://biosong-promotion.s3.ap-northeast-2.amazonaws.com/icon_lock.png" alt="lock" />
+                                    </button>
+                                </td>
+                                <td>23-01-13</td>
+                                <!-- [D] 답변완료 케이스는 on 클래스 추가 -->
+                                <td class="box_state on">답변완료</td>
+                            </tr>
+                            <tr>
+                                <td class="number"><span>3</span></td>
+                                <td class="table_title">
+                                    <button>
+                                        <span>산업보안 아이디어 공모전 홍보 콘텐츠 공모전이 시작되었습니다.</span>
+                                        <img class="lock icon" src="https://biosong-promotion.s3.ap-northeast-2.amazonaws.com/icon_lock.png" alt="lock" />
+                                    </button>
+                                </td>
+                                <td>22-12-12</td>
+                                <!-- [D] 답변완료 케이스는 on 클래스 추가 -->
+                                <td class="box_state on">답변완료</td>
+                            </tr>
+                            <tr>
+                                <td class="number"><span>3</span></td>
+                                <td class="table_title">
+                                    <button>
+                                        <span>말줄임테스트일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십</span>
+                                        <img class="lock icon" src="https://biosong-promotion.s3.ap-northeast-2.amazonaws.com/icon_lock.png" alt="lock" />
+                                    </button>
+                                </td>
+                                <td>22-12-12</td>
+                                <!-- [D] 답변완료 케이스는 on 클래스 추가 -->
+                                <td class="box_state on">답변완료</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="pagination">
+                        <a href="#"><</a>
+                        <a href="#" class="active">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                        <a href="#">9</a>
+                        <a href="#">10</a>
+                        <a href="#">></a>
+                        <button class="btn_write">글쓰기</button>
+                    </div>
+                </div>
+
+                <!-- 글쓰기 영역 -->
+                <div class="content_wrap">
+                    <p class="notice_text"><em class="point_color">*</em>표시는 필수 입력 항목입니다.</p>
+                    <div class="table_answer">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">
+                                        <span class="required" id="nameField">
+                                            <em class="point_color">*</em>
+                                            이름
+                                        </span>
+                                    </th>
+                                    <td>
+                                        <div class="text-input-wrapper">
+                                            <input type="text" name="author" maxlength="25" placeholder="" value="" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <span class="required">
+                                            <em class="point_color">*</em>
+                                            비밀번호
+                                        </span>
+                                    </th>
+                                    <td>
+                                        <div class="text-input-wrapper">
+                                            <input type="password" name="password" maxlength="20" value="" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <span class="required">
+                                            <em class="point_color">*</em>
+                                            제목
+                                        </span>
+                                    </th>
+                                    <td>
+                                        <div>
+                                            <input type="text" name="title" maxlength="100" id="" value="" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">
+                                        <span class="required">
+                                            <em class="point_color">*</em>
+                                            내용
+                                        </span>
+                                    </th>
+                                    <td>
+                                        <textarea name="text"></textarea>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="btn_cancel">취소</button>
+                    <button class="btn_submit">작성하기</button>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="content_inner">
+                <div class="footer_text">
+                    <p>제9회 산업보안 아이디어 공모전 운영사무국 ㈜인투인미디어 / 문의전화 : 02-2233-4016</p>
+                    <p>서울시 영등포구 양평로 21길 26 1203호 사업자등록번호 : 201-86-21825</p>
+                    <p>copyright ⓒ 산업보안 아이디어 공모전 ALL RIGHTS RESERVED</p>
+                </div>
+                <ul class="footer_link_list">
+                    <li>
+                        <a target="_blank" href="https://www.kbiohealth.kr/">
+                            <img src="../img/logo_kait.png" alt="오송첨단의료산업진흥재단" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+
+    <script>
+        $(function () {
+            $(".gnb_menu > li").hover(
+                function () {
+                    $(this).find(".sub_menu").stop().slideDown(200);
+                },
+                function () {
+                    $(this).find(".sub_menu").stop().slideUp(200);
+                }
+            );
+        });
+
+        function showNotice() {
+            var notice = document.getElementById("notice");
+            notice.style.display = "block";
+        }
+
+        function hideNotice() {
+            var notice = document.getElementById("notice");
+            notice.style.display = "none";
+        }
+    </script>
+</html>

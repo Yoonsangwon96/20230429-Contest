@@ -128,11 +128,24 @@ main {
 .main_content {
     min-height: 800px;
     background-color: #e2edf9;
+
+    > .content_inner {
+        position: relative;
+    }
+}
+
+.content_main_banner {
+    padding-top: 100px;
+    text-align: center;
 }
 
 .content_main_image {
-    padding-top: 100px;
-    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 503px;
+    height: 423px;
+    background: url(../img/main_image.png) no-repeat;
 }
 
 .content_right {
