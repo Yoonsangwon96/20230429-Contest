@@ -73,10 +73,10 @@ body {
 .gnb_menu {
     display: flex;
     align-items: center;
+    z-index: 10;
     margin-right: -58px; /* 디자인 맞춤 */
     margin-left: auto;
     font-size: 20px;
-    z-index: 10;
 
     > li {
         display: flex;
@@ -424,4 +424,65 @@ footer {
     cursor: pointer;
     box-sizing: border-box;
     box-sizing: border-box;
+}
+
+// 반응형
+@media (max-width: 700px) {
+    // 홈 화면
+    .main_content {
+        min-height: 100%;
+
+        > .content_inner {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+    }
+
+    .content_inner {
+        width: auto;
+    }
+
+    .content_main_image {
+        order: 3;
+        position: static;
+        width: 100%;
+        height: 100%;
+        background-size: contain;
+    }
+
+    .content_right {
+        order: 2;
+    }
+
+    .area_content_link {
+        flex: 1 0 auto;
+
+        > li {
+            flex: 0 0 46%;
+            height: auto;
+            margin: 0;
+            margin-bottom: 0;
+        }
+    }
+
+    .link_banner {
+        display: block;
+    }
+
+    .gnb_menu {
+        display: none;
+    }
+
+    .area_notice {
+        display: none;
+    }
+
+    .content_right {
+        margin: 0;
+    }
+
+    footer {
+        display: none;
+    }
 }
