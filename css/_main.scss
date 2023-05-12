@@ -2,6 +2,7 @@
 body {
     display: flex;
     flex-direction: column;
+    min-width: 1320px;
 
     header,
     footer {
@@ -58,6 +59,10 @@ body {
 .gnb_left {
     display: flex;
     align-items: center;
+}
+
+.mobile_image {
+    display: none;
 }
 
 .link_header_banner {
@@ -426,8 +431,21 @@ footer {
     box-sizing: border-box;
 }
 
+.btn_home {
+    display: none;
+}
+
 // 반응형
 @media (max-width: 700px) {
+    body {
+        overflow-x: hidden;
+        min-width: auto;
+    }
+
+    .gnb_left {
+        margin-right: 20px;
+    }
+
     // 홈 화면
     .main_content {
         min-height: 100%;
@@ -443,11 +461,39 @@ footer {
         width: auto;
     }
 
+    .content_top {
+        .mobile_image {
+            padding: 7.14vw;
+            box-sizing: border-box;
+        }
+    }
+
+    .title.about {
+        + .content_wrap {
+            .mobile_image {
+                margin: 0 auto;
+                padding: 7.14vw 7.14vw 14.28vw;
+                box-sizing: border-box;
+            }
+        }
+    }
+
+    .mobile_image {
+        display: block;
+
+        + img {
+            display: none;
+        }
+    }
+
     .content_main_image {
         order: 3;
         position: static;
         width: 100%;
-        height: 100%;
+        margin: 0 auto;
+        margin-top: 7.14vw;
+        background-repeat: no-repeat;
+        background-position: center center;
         background-size: contain;
     }
 
@@ -457,21 +503,117 @@ footer {
 
     .area_content_link {
         flex: 1 0 auto;
-
-        > li {
-            flex: 0 0 46%;
-            height: auto;
-            margin: 0;
-            margin-bottom: 0;
-        }
     }
 
     .link_banner {
         display: block;
     }
 
+    .main_content {
+        > .content_inner {
+            padding: 0 7.14vw;
+        }
+    }
+
+    .content_main_banner {
+        padding: 14.29vw 0 7.14vw;
+    }
+
+    .gnb {
+        padding: 0 7.14vw;
+    }
+
     .gnb_menu {
         display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 65%;
+        margin: 0;
+        padding-top: 18.42vw;
+        background: #f8f5f1;
+        text-align: left;
+
+        > li {
+            display: block;
+            flex: 0 1 auto;
+            width: auto;
+            height: auto;
+
+            > a {
+                height: 60px;
+                padding-left: 50px;
+                font-size: 22px;
+                color: #464646;
+            }
+        }
+    }
+
+    .content_link_wrap {
+        display: flex;
+    }
+
+    .area_content_link {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .area_content_link li {
+        height: auto;
+        flex-basis: 26vw;
+    }
+
+    .sub_menu {
+        display: block !important;
+        position: static;
+        background: none;
+
+        > li {
+            display: block;
+            text-align: left;
+
+            + li {
+                margin-top: 5px;
+            }
+
+            > a {
+                display: inline-block;
+                position: relative;
+                height: 30px;
+                padding-left: 90px;
+                font-size: 18px;
+                color: #464646;
+
+                &:after {
+                    position: absolute;
+                    top: 8px;
+                    left: 80px;
+                    width: 6px;
+                    height: 2px;
+                    background-color: #9d9b99;
+                    letter-spacing: -0.5px;
+                    content: "";
+                }
+            }
+        }
+    }
+
+    .link_banner {
+        width: 25.71vw;
+        height: 25.71vw;
+        background-size: contain;
+    }
+
+    .btn_home {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        margin-left: auto;
+        background: url(../img/ico_home.png) no-repeat;
+        background-size: contain;
+        vertical-align: top;
+        text-indent: -9999em;
     }
 
     .area_notice {
@@ -484,5 +626,54 @@ footer {
 
     footer {
         display: none;
+    }
+
+    .hamburger-menu {
+        width: 36px;
+        height: 4px;
+        margin: -30px 0 0 30px;
+        background-color: #ccc;
+        cursor: pointer;
+
+        .line {
+            display: block;
+            width: 100%;
+            height: 6px;
+            margin-bottom: 8px;
+            background-color: #ccc;
+        }
+    }
+
+    .close-button {
+        display: none;
+        z-index: 10;
+        position: absolute;
+        top: 35px;
+        right: 30px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+
+        .line {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 100%;
+            height: 4px;
+            border-radius: 5px;
+            background-color: #666;
+            transform: translateY(-50%) rotate(45deg);
+            transform-origin: center;
+        }
+
+        .line:first-child {
+            transform: translateY(-50%) rotate(-45deg);
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .area_content_link li {
+        flex-basis: 24vw;
     }
 }

@@ -417,6 +417,7 @@
     padding: 20px 10px;
     background-color: #eee;
     line-height: 1.2;
+    word-break: break-all;
 
     &:before {
         position: absolute;
@@ -698,7 +699,7 @@
 .award-box {
     display: inline-block;
     width: 310px;
-    height: 696px;
+    height: 570px;
     margin: 0 auto 20px;
     padding: 20px;
     border: 1px solid #ddd;
@@ -707,6 +708,10 @@
     .awrad-item {
         flex: 1 0 auto;
         margin: 20px 0;
+    }
+
+    .author {
+        font-weight: bold;
     }
 
     &.best,
@@ -796,4 +801,133 @@
     font-size: 16px;
     color: #fff;
     cursor: pointer;
+}
+
+// 반응형
+@media (max-width: 700px) {
+    // 서브
+    .sub_content {
+        .btn_video {
+            + .btn_audio {
+                margin-left: 0;
+            }
+        }
+
+        .content_wrap {
+            margin-right: 7.14vw;
+            margin-left: 7.14vw;
+            padding-right: 7.14vw;
+            padding-left: 7.14vw;
+        }
+
+        .pagination {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+
+            a {
+                margin-bottom: 5px;
+            }
+        }
+
+        .notice_text {
+            padding-left: 0;
+        }
+
+        .btn_write {
+            display: block;
+            position: static;
+            width: 80%;
+            margin-top: 20px;
+        }
+    }
+
+    .consent_signature {
+        button {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 70%;
+        }
+    }
+
+    .app_table {
+        width: 100%;
+
+        input[type="file"] {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+
+    .form_container {
+        > input,
+        .button {
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+
+    .table_notice {
+        max-width: 100%;
+
+        th,
+        td {
+            &:first-child {
+                display: none;
+            }
+        }
+    }
+
+    .filter_wrap {
+        display: flex;
+        justify-content: center;
+        margin-right: 0;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+    }
+
+    .notice_filter {
+        width: 100%;
+        margin-bottom: 10px;
+
+        + .search_bar {
+            margin-left: 0;
+        }
+    }
+
+    .search_bar {
+        flex: 1 0 auto;
+        width: 100%;
+
+        + .btn_search {
+            margin-left: 0;
+        }
+    }
+
+    .btn_search {
+        width: 100%;
+        margin-top: 5px;
+        box-sizing: border-box;
+    }
+
+    .table_answer {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .faq_list {
+        width: 100%;
+    }
+
+    .award-box {
+        width: 100%;
+        box-sizing: border-box;
+
+        + .award-box {
+            margin-left: 0;
+        }
+    }
 }

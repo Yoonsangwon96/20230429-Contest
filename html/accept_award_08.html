@@ -8,7 +8,7 @@
         <title>제 8회 수상작 보기 | 한국산업기술보호협회</title>
         <!-- 나눔스퀘어 웹 폰트 -->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css" />
-        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="../css/style.css" />
         <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     </head>
     <body>
@@ -24,37 +24,47 @@
                     <h2 class="blind">공모전 관련 메뉴</h2>
                     <div class="gnb_left">
                         <a href="#;" target="_blank" class="link_header_banner">
-                            <img src="../img/logo_kait.png" alt="오송첨단의료산업진흥재단" />
+                            <img src="../img/logo_kait.png" alt="한국산업기술보호협회" />
                         </a>
                     </div>
+                    <button type="button" class="btn_home">홈 버튼</button>
+                    <button type="button" class="hamburger-menu">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </button>
                     <ul class="gnb_menu">
-                        <li><a href="/html/home.html">HOME</a></li>
+                        <li><a href="../html/home.html">HOME</a></li>
                         <li>
-                            <a href="/html/about.html">공모요강</a>
+                            <a href="../html/about.html">공모요강</a>
                         </li>
                         <li>
                             <a href="#;">접수 및 확인</a>
                             <ul class="sub_menu">
-                                <li><a href="/html/accept_application.html">작품접수</a></li>
-                                <li><a href="/html/accept_check.html">작품확인</a></li>
+                                <li><a href="../html/accept_application.html">작품접수</a></li>
+                                <li><a href="../html/accept_check.html">작품확인</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="#;">커뮤니티</a>
                             <ul class="sub_menu">
-                                <li><a href="/html/accept_notice.html">공지사항</a></li>
-                                <li><a href="/html/accept_qna.html">Q&A</a></li>
-                                <li><a href="/html/accept_faq.html">FAQ</a></li>
+                                <li><a href="../html/accept_notice.html">공지사항</a></li>
+                                <li><a href="../html/accept_qna.html">Q&A</a></li>
+                                <li><a href="../html/accept_faq.html">FAQ</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="#;">수상작</a>
                             <ul class="sub_menu">
-                                <li><a href="/html/accept_award_08.html">제 8회 수상작 보기</a></li>
+                                <li><a href="../html/accept_award_08.html">제 8회 수상작 보기</a></li>
                                 <li><a href="#;">제 9회 수상작 보기</a></li>
                             </ul>
                         </li>
                     </ul>
+                    <div class="close-button">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -62,6 +72,7 @@
             <div class="content_top">
                 <div class="content_inner">
                     <!-- 서브페이지 - 상단 배너 -->
+                    <img class="mobile_image" src="../img/main_text_mobile_02.png" alt="내가 담은 산업보안 이야기, 공모기간 2023. 06. 01 ~ 08. 31, 공모 접수 기간은 외부 환경 및 참가작 수준에 따라 변경 가능" />
                     <img src="../img/sub_top_image.png" alt="내가 담은 산업보안 이야기, 공모기간 2023. 06. 01 ~ 08. 31, 공모 접수 기간은 외부 환경 및 참가작 수준에 따라 변경 가능" />
                 </div>
             </div>
@@ -74,60 +85,125 @@
                             <input type="radio" name="select" id="option-1" value="song" checked="" />
                             <label for="option-1" class="option option-1">
                                 <div class="dot"></div>
-                                <span>분야 1</span>
+                                <span>일반부</span>
                             </label>
                             <input type="radio" name="select" id="option-2" value="video" />
                             <label for="option-2" class="option option-2">
                                 <div class="dot"></div>
-                                <span>분야 2</span>
+                                <span>학생부</span>
                             </label>
                         </div>
                         <div class="tab-content" id="tab-content-1">
                             <div class="awards-wrapper">
                                 <!-- 최우수상, 대상은 한 줄에 하나만 노출 -->
-                                <div class="award-box best">
-                                    <div class="award-box-wrapper">
-                                        <h4 class="award-title">최우수상</h4>
-                                        <div class="awrad-item">작품 영역</div>
-                                        <p class="author">작성자 이름</p>
-                                        <button class="view-btn">보기</button>
-                                    </div>
-                                </div>
                                 <div class="award-box grand">
                                     <div class="award-box-wrapper">
                                         <h4 class="award-title">대상</h4>
-                                        <div class="awrad-item">작품 영역</div>
-                                        <p class="author">작성자 이름</p>
+                                        <div class="awrad-item">
+                                            <img src="../img/award_image_01.jpg" alt="작품 이미지" />
+                                        </div>
+                                        <p class="author">노연승</p>
+                                        <button class="view-btn">보기</button>
+                                    </div>
+                                </div>
+                                <div class="award-box best">
+                                    <div class="award-box-wrapper">
+                                        <h4 class="award-title">최우수상</h4>
+                                        <div class="awrad-item">
+                                            <img src="../img/award_image_02.jpg" alt="작품 이미지" />
+                                        </div>
+                                        <p class="author">백남균</p>
                                         <button class="view-btn">보기</button>
                                     </div>
                                 </div>
                                 <div class="award-box excellent">
                                     <div class="award-box-wrapper">
                                         <h4 class="award-title">우수상</h4>
-                                        <div class="awrad-item">작품 영역</div>
-                                        <p class="author">작성자 이름</p>
+                                        <div class="awrad-item">
+                                            <img src="../img/award_image_03.jpg" alt="작품 이미지" />
+                                        </div>
+                                        <p class="author">이동준</p>
                                         <button class="view-btn">보기</button>
                                     </div>
                                 </div>
-                                <div class="award-box prize">
+
+                                <div class="award-box excellent">
                                     <div class="award-box-wrapper">
-                                        <h4 class="award-title">입상</h4>
-                                        <div class="awrad-item">작품 영역</div>
-                                        <p class="author">작성자 이름</p>
+                                        <h4 class="award-title">우수상</h4>
+                                        <div class="awrad-item">
+                                            <img src="../img/award_image_04.jpg" alt="작품 이미지" />
+                                        </div>
+                                        <p class="author">김리하</p>
                                         <button class="view-btn">보기</button>
                                     </div>
                                 </div>
-                                <div class="award-box prize">
+
+                                <div class="award-box excellent">
                                     <div class="award-box-wrapper">
-                                        <h4 class="award-title">입상</h4>
-                                        <div class="awrad-item">작품 영역</div>
-                                        <p class="author">작성자 이름</p>
+                                        <h4 class="award-title">우수상</h4>
+                                        <div class="awrad-item">
+                                            <img src="../img/award_image_05.jpg" alt="작품 이미지" />
+                                        </div>
+                                        <p class="author">권상훈</p>
                                         <button class="view-btn">보기</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="tab-content" id="tab-content-2">분야 2에 대한 내용</div>
+                        <div class="tab-content" id="tab-content-2">
+                            <div class="awards-wrapper">
+                                <div class="award-box grand">
+                                    <div class="award-box-wrapper">
+                                        <h4 class="award-title">대상</h4>
+                                        <div class="awrad-item">
+                                            <img src="../img/award_image_06.jpg" alt="작품 이미지" />
+                                        </div>
+                                        <p class="author">유수민</p>
+                                        <button class="view-btn">보기</button>
+                                    </div>
+                                </div>
+                                <div class="award-box best">
+                                    <div class="award-box-wrapper">
+                                        <h4 class="award-title">최우수상</h4>
+                                        <div class="awrad-item">
+                                            <img src="../img/award_image_07.jpg" alt="작품 이미지" />
+                                        </div>
+                                        <p class="author">김동윤</p>
+                                        <button class="view-btn">보기</button>
+                                    </div>
+                                </div>
+                                <div class="award-box excellent">
+                                    <div class="award-box-wrapper">
+                                        <h4 class="award-title">우수상</h4>
+                                        <div class="awrad-item">
+                                            <img src="../img/award_image_08.jpg" alt="작품 이미지" />
+                                        </div>
+                                        <p class="author">정의인</p>
+                                        <button class="view-btn">보기</button>
+                                    </div>
+                                </div>
+                                <div class="award-box prize">
+                                    <div class="award-box-wrapper">
+                                        <h4 class="award-title">장려상</h4>
+                                        <div class="awrad-item">
+                                            <img src="../img/award_image_09.jpg" alt="작품 이미지" />
+                                        </div>
+                                        <p class="author">손희수</p>
+                                        <button class="view-btn">보기</button>
+                                    </div>
+                                </div>
+                                <div class="award-box prize">
+                                    <div class="award-box-wrapper">
+                                        <h4 class="award-title">장려상</h4>
+                                        <div class="awrad-item">
+                                            <img src="../img/award_image_10.jpg" alt="작품 이미지" />
+                                        </div>
+                                        <p class="author">오다민</p>
+                                        <button class="view-btn">보기</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -142,7 +218,7 @@
                 <ul class="footer_link_list">
                     <li>
                         <a target="_blank" href="https://www.kbiohealth.kr/">
-                            <img src="../img/logo_kait.png" alt="오송첨단의료산업진흥재단" />
+                            <img src="../img/logo_kait.png" alt="한국산업기술보호협회" />
                         </a>
                     </li>
                 </ul>
@@ -162,6 +238,22 @@
             );
         });
 
+        $(document).ready(function () {
+            var gnbMenuWidth = $(".gnb_menu").outerWidth();
+
+            $(".hamburger-menu").click(function () {
+                $(".gnb_menu").animate({ right: 0 }, 300).css("display", "block");
+                $(".close-button").fadeIn(300);
+            });
+
+            $(".close-button").click(function () {
+                $(".gnb_menu").animate({ right: -gnbMenuWidth }, 300, function () {
+                    $(this).css("display", "none");
+                });
+                $(this).fadeOut(300);
+            });
+        });
+
         function showNotice() {
             var notice = document.getElementById("notice");
             notice.style.display = "block";
@@ -171,5 +263,24 @@
             var notice = document.getElementById("notice");
             notice.style.display = "none";
         }
+
+        $(document).ready(function () {
+            $(".faq_title").click(function () {
+                $(this).next(".faq_content").slideToggle(200);
+            });
+        });
+
+        $(document).ready(function () {
+            // 초기 선택된 탭 설정
+            $(".tab-content").hide(); // 모든 탭 내용 숨김
+            $("#tab-content-1").show(); // 분야 1의 탭 내용 보여줌
+
+            // 라디오 버튼 변경 시 이벤트 핸들러
+            $("input[name='select']").change(function () {
+                var selectedTab = $(this).attr("id").replace("option-", "");
+                $(".tab-content").hide(); // 모든 탭 내용 숨김
+                $("#tab-content-" + selectedTab).show(); // 선택된 탭 내용 보여줌
+            });
+        });
     </script>
 </html>

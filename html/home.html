@@ -8,7 +8,7 @@
         <title>메인 | 한국산업기술보호협회</title>
         <!-- 나눔스퀘어 웹 폰트 -->
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css" />
-        <link rel="stylesheet" href="/css/style.css" />
+        <link rel="stylesheet" href="../css/style.css" />
         <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     </head>
     <body>
@@ -24,37 +24,48 @@
                     <h2 class="blind">공모전 관련 메뉴</h2>
                     <div class="gnb_left">
                         <a href="#;" target="_blank" class="link_header_banner">
-                            <img src="../img/logo_kait.png" alt="오송첨단의료산업진흥재단" />
+                            <img src="../img/logo_kait.png" alt="한국산업기술보호협회" />
                         </a>
                     </div>
+                    <button type="button" class="btn_home">홈 버튼</button>
+                    <button type="button" class="hamburger-menu">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </button>
+
                     <ul class="gnb_menu">
-                        <li><a href="/html/home.html">HOME</a></li>
+                        <li><a href="../html/home.html">HOME</a></li>
                         <li>
-                            <a href="/html/about.html">공모요강</a>
+                            <a href="../html/about.html">공모요강</a>
                         </li>
                         <li>
                             <a href="#;">접수 및 확인</a>
                             <ul class="sub_menu">
-                                <li><a href="/html/accept_application.html">작품접수</a></li>
-                                <li><a href="/html/accept_check.html">작품확인</a></li>
+                                <li><a href="../html/accept_application.html">작품접수</a></li>
+                                <li><a href="../html/accept_check.html">작품확인</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="#;">커뮤니티</a>
                             <ul class="sub_menu">
-                                <li><a href="/html/accept_notice.html">공지사항</a></li>
-                                <li><a href="/html/accept_qna.html">Q&A</a></li>
-                                <li><a href="/html/accept_faq.html">FAQ</a></li>
+                                <li><a href="../html/accept_notice.html">공지사항</a></li>
+                                <li><a href="../html/accept_qna.html">Q&A</a></li>
+                                <li><a href="../html/accept_faq.html">FAQ</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="#;">수상작</a>
                             <ul class="sub_menu">
-                                <li><a href="/html/accept_award_08.html">제 8회 수상작 보기</a></li>
+                                <li><a href="../html/accept_award_08.html">제 8회 수상작 보기</a></li>
                                 <li><a href="#;">제 9회 수상작 보기</a></li>
                             </ul>
                         </li>
                     </ul>
+                </div>
+                <div class="close-button">
+                    <span class="line"></span>
+                    <span class="line"></span>
                 </div>
             </nav>
         </header>
@@ -71,14 +82,14 @@
                         <h4 class="blind">접수 관련 링크 목록</h4>
                         <ul class="area_content_link">
                             <li class="banner_write">
-                                <a href="/html/accept_application.html">접수하기</a>
+                                <a href="../html/accept_application.html">접수하기</a>
                             </li>
                             <li class="banner_check">
-                                <a href="/html/accept_check.html">접수확인</a>
+                                <a href="../html/accept_check.html">접수확인</a>
                             </li>
-                            <li class="banner_qna"><a href="/html/accept_qna.html">Q&A</a></li>
+                            <li class="banner_qna"><a href="../html/accept_qna.html">Q&A</a></li>
                             <li class="banner_download">
-                                <a href="/html/accept_notice.html">신청서 다운로드</a>
+                                <a href="../html/accept_notice.html">신청서 다운로드</a>
                             </li>
                         </ul>
                         <div class="link_banner">
@@ -136,7 +147,7 @@
                 <ul class="footer_link_list">
                     <li>
                         <a target="_blank" href="https://www.kbiohealth.kr/">
-                            <img src="../img/logo_kait.png" alt="오송첨단의료산업진흥재단" />
+                            <img src="../img/logo_kait.png" alt="한국산업기술보호협회" />
                         </a>
                     </li>
                 </ul>
@@ -154,6 +165,22 @@
                     $(this).find(".sub_menu").stop().slideUp(200);
                 }
             );
+        });
+
+        $(document).ready(function () {
+            var gnbMenuWidth = $(".gnb_menu").outerWidth();
+
+            $(".hamburger-menu").click(function () {
+                $(".gnb_menu").animate({ right: 0 }, 300).css("display", "block");
+                $(".close-button").fadeIn(300);
+            });
+
+            $(".close-button").click(function () {
+                $(".gnb_menu").animate({ right: -gnbMenuWidth }, 300, function () {
+                    $(this).css("display", "none");
+                });
+                $(this).fadeOut(300);
+            });
         });
 
         function showNotice() {
