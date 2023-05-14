@@ -752,10 +752,62 @@ footer {
             transform: translateY(-50%) rotate(-45deg);
         }
     }
+
+    .table_notice {
+        .state {
+            width: 20% !important;
+        }
+    }
+
+    .area_content {
+        width: 100%;
+    }
+
+    .input_password {
+        width: 100% !important;
+    }
+
+    .wrap_btn {
+        > button {
+            margin-top: 10px;
+        }
+    }
+
+    .sub_content {
+        .point_color {
+            display: block !important;
+        }
+    }
+
+    .table_accept_check {
+        width: 100%;
+        margin: 0 !important;
+    }
+
+    .box_state {
+        width: 10%;
+    }
 }
 
 @media (max-width: 500px) {
     .area_content_link li {
         flex-basis: 24vw;
+    }
+
+    .app_table {
+        input[type="date"] {
+            width: 100%;
+            font-size: 12px;
+        }
+    }
+
+    .radio_btn {
+        label {
+            display: block;
+
+            + label {
+                margin-left: 0 !important;
+            }
+        }
     }
 }

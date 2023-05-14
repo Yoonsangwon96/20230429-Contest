@@ -326,6 +326,7 @@
     border: 1px solid #ddd;
     border-radius: 5px;
     background-color: #eee;
+    box-sizing: border-box;
 
     table {
         width: 100%;
@@ -815,12 +816,56 @@
 
 .link_home {
     display: inline-block;
+    margin-bottom: 50px;
     padding: 20px 30px;
     border-radius: 10px;
-    font-size: 20px;
-    margin-bottom: 50px;
     background-color: #3451a3;
+    font-size: 20px;
     color: #fff;
+}
+
+.table_text {
+    margin: 0 0 20px 50px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.table_accept_check {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 50px;
+    border-top: 2px solid #333;
+    border-bottom: 2px solid #333;
+
+    tr {
+        + tr {
+            border-top: 1px solid #ddd;
+        }
+    }
+
+    th,
+    td {
+        padding: 15px;
+    }
+
+    th {
+        width: 20%;
+        background-color: #f9f9f9;
+        box-sizing: border-box;
+    }
+
+    td {
+        text-align: left;
+    }
+
+    button {
+        font-weight: bold;
+    }
+}
+
+button {
+    cursor: pointer;
 }
 
 // 반응형
@@ -899,6 +944,14 @@
                 display: none;
             }
         }
+
+        .no-post {
+            td {
+                &:first-child {
+                    display: block;
+                }
+            }
+        }
     }
 
     .filter_wrap {
@@ -943,11 +996,15 @@
     }
 
     .award-box {
+        + .award-box {
+            margin-left: 0 !important;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .award-box {
         width: 100%;
         box-sizing: border-box;
-
-        + .award-box {
-            margin-left: 0;
-        }
     }
 }

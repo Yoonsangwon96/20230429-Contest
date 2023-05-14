@@ -482,9 +482,80 @@
                     <button class="btn_download excel">엑셀다운</button>
                 </footer>
             </div>
-            <div id="qna_check" class="dimmed_layer">
+            <div id="award_management" class="dimmed_layer">
                 <div class="area_content">
-                    <h2 class="blind">공지사항</h2>
+                    <h2 class="blind">작품접수관리</h2>
+                    <table class="admin_table">
+                        <tbody>
+                            <tr>
+                                <td class="app_label">접수일</td>
+                                <td colspan="3">2023. 1. 29.</td>
+                            </tr>
+                            <tr>
+                                <td class="app_label">접수번호</td>
+                                <td>로고송 부문 / 627948b7</td>
+                                <td class="app_label">개인</td>
+                                <td><input type="text" id="app_address" name="app_address" /></td>
+                            </tr>
+                            <tr>
+                                <td class="app_label">이름</td>
+                                <td>윤상원</td>
+                                <td class="app_label">생년월일</td>
+                                <td>1996-09-07</td>
+                            </tr>
+                            <tr>
+                                <td class="app_label">휴대폰번호</td>
+                                <td>010-5126-7774</td>
+                                <td class="app_label">이메일</td>
+                                <td>yoonsangwon0907@naver.com</td>
+                            </tr>
+                            <tr>
+                                <td class="app_label">주소</td>
+                                <td colspan="3">서울시 은평구</td>
+                            </tr>
+                            <tr>
+                                <td class="app_label">지원경로</td>
+                                <td colspan="3">홈페이지</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="sub_title">팀원 정보</p>
+                    <table class="admin_table">
+                        <tbody>
+                            <tr>
+                                <td class="app_label">팀원1</td>
+                                <td colspan="3">일이삼사오육칠팔구십</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="sub_title">작품 입력사항</p>
+                    <table class="admin_table">
+                        <tbody>
+                            <tr>
+                                <td class="app_label">작품명</td>
+                                <td colspan="3">우리 나라의 바이오 헬스 산업</td>
+                            </tr>
+                            <tr>
+                                <td class="app_label">작품</td>
+                                <td colspan="3"><button type="button">[627948B7][안태용]우리 나라의 바이오 헬스 산업.mp3</button></td>
+                            </tr>
+                            <tr>
+                                <td class="app_label">작품설명</td>
+                                <td colspan="3">국민 건강에 기여하고 새로운 일자리를 창출하며, 경제 성장을 이끄는 우리 나라의 유망 신산업인 바이오 헬스 산업을 홍보하는 것을 주제로 삼아 홍보 로고송을 만들었다. 기분 좋은 반주, 친근한 멜로디와 반복되는 가사를 통해 따라 부르기 쉽고 기억에 남을 수 있도록 했다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="wrap_btn">
+                        <button type="button" class="btn_more" onclick="hideLayer()">목록 보기</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="qna_check" class="dimmed_layer" style="display: none">
+                <div class="area_content">
+                    <h2 class="blind">QNA 질문 보기</h2>
                     <div class="layer_content">
                         <div class="layer_content_header">
                             <strong class="title ellipsis">공지사항레이어타이틀긴타입테스트일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십 </strong>
@@ -517,7 +588,7 @@
             </div>
 
             <!-- 공지사항 작성 모달 -->
-            <div id="qna_check" class="dimmed_layer">
+            <div id="qna_check" class="dimmed_layer" style="display: none">
                 <div class="area_content">
                     <h2 class="blind">공지사항</h2>
                     <p class="notice_text"><em class="point_color">*</em>표시는 필수 입력 항목입니다.</p>

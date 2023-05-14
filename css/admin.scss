@@ -570,8 +570,8 @@ h3.title {
 }
 
 .btn_submit {
-    background-color: #3451a3;
     border: none !important;
+    background-color: #3451a3;
     color: #fff !important;
 }
 
@@ -597,4 +597,31 @@ h3.title {
     display: inline-block;
     color: #8f0506;
     vertical-align: top;
+}
+
+.admin_table {
+    line-height: 1.4;
+
+    .app_label {
+        background-color: #f9f9f9;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    td {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    button {
+        cursor: pointer;
+    }
+}
+
+.sub_title {
+    align-self: flex-start;
+    margin: 50px 0 10px;
+    font-size: 20px !important;
+    font-weight: bold;
 }
