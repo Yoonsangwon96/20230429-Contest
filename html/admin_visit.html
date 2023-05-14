@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>관리자 센터</title>
+        <link rel="stylesheet" href="../css/admin.css" />
+    </head>
+    <body>
+        <header>
+            <div class="header_top">
+                <h1>제9회 산업보안 아이디어 공모전 관리자 센터</h1>
+                <div class="login_info">
+                    <p><strong>관리자</strong>님 환영합니다.</p>
+                    <button>로그아웃</button>
+                    <button>서비스 메인</button>
+                </div>
+            </div>
+            <nav>
+                <ul class="tab_list">
+                    <!-- [D] 활성화 메뉴는 on 클래스 추가 -->
+                    <li><a href="../html/admin_home.html">Home</a></li>
+                    <li><a href="../html/admin_manage.html">게시물관리</a></li>
+                    <li><a href="../html/admin_award.html">수상작</a></li>
+                    <li><a href="../html/admin_visit.html" class="on">접속통계</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main role="main">
+            <h2 class="title">접속통계</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th width="20%">총 접속수</th>
+                        <td>
+                            <p><em>1234</em>명</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="20%">오늘 접속수</th>
+                        <td>
+                            <p><em>1234</em>명</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="20%">어제 접속수</th>
+                        <td>
+                            <p><em>1234</em>명</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th width="20%">조회일</th>
+                        <td>
+                            <input type="date" id="start" name="trip-start" value="2023-04-29" min="2023-04-29" max="2023-04-31" />
+                            <select name="hour">
+                                <option value="00">00</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                            </select>
+                            :
+                            <select name="minute">
+                                <option value="00">00</option>
+                                <option value="05">05</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="25">25</option>
+                                <option value="30">30</option>
+                                <option value="35">35</option>
+                                <option value="40">40</option>
+                                <option value="45">45</option>
+                                <option value="50">50</option>
+                                <option value="55">55</option>
+                            </select>
+                            ~ <input type="date" id="start" name="trip-start" value="2023-04-29" min="2023-04-29" max="2023-04-31" />
+                            <select name="hour">
+                                <option value="00">00</option>
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                            </select>
+                            :
+                            <select name="minute">
+                                <option value="00">00</option>
+                                <option value="05">05</option>
+                                <option value="10">10</option>
+                                <option value="15">15</option>
+                                <option value="20">20</option>
+                                <option value="25">25</option>
+                                <option value="30">30</option>
+                                <option value="35">35</option>
+                                <option value="40">40</option>
+                                <option value="45">45</option>
+                                <option value="50">50</option>
+                                <option value="55">55</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr class="stats">
+                        <th>조회항목</th>
+                        <td>
+                            <button type="button">방문자</button>
+                            <button type="button">방문도메인</button>
+                            <button type="button">사용자 정보</button>
+                            <button type="button">시간</button>
+                            <button type="button">요일</button>
+                            <button type="button">날짜(일)</button>
+                            <button type="button">날짜(월)</button>
+                            <button type="button">날짜(년)</button>
+                        </td>
+                    </tr>
+                </thead>
+            </table>
+            <p class="visit_info">전체 <em class="number">3369</em>건의 게시물이 검색되었습니다.</p>
+            <!-- 방문자 -->
+            <table class="table table_current">
+                <thead>
+                    <tr>
+                        <th>방문경로</th>
+                        <th>사용자 정보</th>
+                        <th>날짜</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>직접 입력</td>
+                        <td>Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.5615.142 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)</td>
+                        <td>2023-04-29 09:00:00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 방문도메인 -->
+            <table class="table table_current">
+                <thead>
+                    <tr>
+                        <th width="30%">방문도메인</th>
+                        <th width="10%">방문자 수</th>
+                        <th>그래프</th>
+                        <th width="10%">백분율</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>직접 입력</td>
+                        <td>2142</td>
+                        <td class="graph">
+                            <span class="graph-bar" style="width: 63.58%"></span>
+                        </td>
+                        <td>63.58%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 사용자 정보 -->
+            <table class="table table_current">
+                <thead>
+                    <tr>
+                        <th width="30%">사용자 정보</th>
+                        <th width="10%">방문자 수</th>
+                        <th>그래프</th>
+                        <th width="10%">백분율</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36</td>
+                        <td>2142</td>
+                        <td class="graph">
+                            <span class="graph-bar" style="width: 63.58%"></span>
+                        </td>
+                        <td>63.58%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 시간 -->
+            <table class="table table_current">
+                <thead>
+                    <tr>
+                        <th width="20%">시간</th>
+                        <th width="10%">방문자 수</th>
+                        <th>그래프</th>
+                        <th width="10%">백분율</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>00시</td>
+                        <td>108</td>
+                        <td class="graph">
+                            <span class="graph-bar" style="width: 63.58%"></span>
+                        </td>
+                        <td>63.58%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 요일 -->
+            <table class="table table_current">
+                <thead>
+                    <tr>
+                        <th width="20%">요일</th>
+                        <th width="10%">방문자 수</th>
+                        <th>그래프</th>
+                        <th width="10%">백분율</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>일</td>
+                        <td>108</td>
+                        <td class="graph">
+                            <span class="graph-bar" style="width: 63.58%"></span>
+                        </td>
+                        <td>63.58%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 날짜(일) -->
+            <table class="table table_current">
+                <thead>
+                    <tr>
+                        <th width="20%">날짜(일)</th>
+                        <th width="10%">방문자 수</th>
+                        <th>그래프</th>
+                        <th width="10%">백분율</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>일</td>
+                        <td>108</td>
+                        <td class="graph">
+                            <span class="graph-bar" style="width: 63.58%"></span>
+                        </td>
+                        <td>63.58%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 날짜(월) -->
+            <table class="table table_current">
+                <thead>
+                    <tr>
+                        <th width="20%">날짜(월)</th>
+                        <th width="10%">방문자 수</th>
+                        <th>그래프</th>
+                        <th width="10%">백분율</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>일</td>
+                        <td>108</td>
+                        <td class="graph">
+                            <span class="graph-bar" style="width: 63.58%"></span>
+                        </td>
+                        <td>63.58%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- 날짜(년) -->
+            <table class="table table_current">
+                <thead>
+                    <tr>
+                        <th width="20%">날짜(년)</th>
+                        <th width="10%">방문자 수</th>
+                        <th>그래프</th>
+                        <th width="10%">백분율</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>일</td>
+                        <td>108</td>
+                        <td class="graph">
+                            <span class="graph-bar" style="width: 63.58%"></span>
+                        </td>
+                        <td>63.58%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <footer class="table_footer">
+                <!-- <button class="btn_delete_select">선택 삭제</button> -->
+                <div class="pagination">
+                    <a href="#" class="prev"><</a>
+                    <a href="#" class="page active">1</a>
+                    <a href="#" class="next">></a>
+                </div>
+                <!-- <button class="btn_write">작성하기</button> -->
+            </footer>
+        </main>
+    </body>
+</html>

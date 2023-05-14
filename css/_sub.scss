@@ -92,26 +92,32 @@
         position: relative;
         width: 1000px;
         margin: 40px auto 0;
-    }
 
-    .pagination a {
-        margin: 0 4px;
-        padding: 8px 16px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 16px;
-        color: #555;
-        text-decoration: none;
-    }
+        button {
+            margin: 0 4px;
+            padding: 8px 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            color: #555;
+            text-decoration: none;
+            cursor: pointer;
 
-    .pagination a:hover:not(.active) {
-        background-color: #f2f2f2;
-    }
+            &:disabled {
+                background-color: #eee;
+                cursor: default;
+            }
+        }
 
-    .pagination .active {
-        border: 1px solid #007bff;
-        background-color: #007bff;
-        color: white;
+        .pagination button:hover:not(.active) {
+            background-color: #f2f2f2;
+        }
+
+        .active {
+            border: 1px solid #007bff;
+            background-color: #007bff;
+            color: white;
+        }
     }
 
     .btn_write {
@@ -290,6 +296,10 @@
             &:hover {
                 text-decoration: underline;
             }
+        }
+
+        .icon {
+            margin-left: 5px;
         }
     }
 
@@ -803,6 +813,16 @@
     cursor: pointer;
 }
 
+.link_home {
+    display: inline-block;
+    padding: 20px 30px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-bottom: 50px;
+    background-color: #3451a3;
+    color: #fff;
+}
+
 // 반응형
 @media (max-width: 700px) {
     // 서브
@@ -825,7 +845,7 @@
             width: 100%;
             flex-wrap: wrap;
 
-            a {
+            button {
                 margin-bottom: 5px;
             }
         }

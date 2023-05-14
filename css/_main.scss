@@ -335,9 +335,7 @@ footer {
 }
 
 .dimmed_layer {
-    display: none; /* 처음에는 보이지 않도록 설정 */
     z-index: 9999; /* 다른 요소보다 위에 나타나도록 설정 */
-    z-index: 10;
     position: fixed;
     top: 0;
     right: 0;
@@ -354,6 +352,39 @@ footer {
 
     p {
         font-size: 16px;
+    }
+
+    // qna
+    &.qna {
+        .register_date,
+        .layer_content_body {
+            text-align: left;
+        }
+
+        .notice_text {
+            margin-top: 15px;
+            padding: 0;
+        }
+
+        .layer_content_body {
+            p + p {
+                margin-top: 0;
+            }
+        }
+
+        .btn_cancel {
+            display: inline-block;
+            width: 150px;
+            height: 50px;
+            margin: 30px 5px 0;
+            border: 1px solid #3552a4;
+            border-radius: 2px;
+            font-size: 18px;
+            color: #3552a4;
+            line-height: 50px;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
     }
 }
 
@@ -379,13 +410,16 @@ footer {
     border-bottom: 2px solid #222;
 
     .title {
-        display: block;
+        display: block !important;
+        width: auto !important;
         max-width: 100%;
+        height: auto !important;
         font-family: "GmarketSans";
         font-size: 20px;
         font-weight: bold;
         color: #000;
         line-height: 24px;
+        text-indent: initial !important;
     }
 }
 
@@ -405,6 +439,7 @@ footer {
 
 .layer_content_body {
     padding: 45px 10px;
+    line-height: 1.2;
 
     p {
         line-height: 20px;
@@ -413,26 +448,73 @@ footer {
             margin-top: 15px;
         }
     }
+
+    .input_password {
+        width: 400px;
+        height: 40px;
+        margin-top: 30px;
+        padding: 0 5px;
+        border: 1px solid #333;
+    }
 }
 
-.btn_more {
+.answer_wrap {
+    margin-top: 100px;
+
+    > strong {
+        display: block;
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+}
+
+.btn_more,
+.btn_modify,
+.btn_cancel,
+.btn_remove {
     display: inline-block;
     width: 150px;
     height: 50px;
     margin: 0 5px;
     margin-top: 30px;
     border-radius: 2px;
-    background-color: #3552a4;
     font-size: 18px;
-    color: #fff;
     line-height: 50px;
     cursor: pointer;
     box-sizing: border-box;
-    box-sizing: border-box;
+}
+
+.btn_cancel,
+.btn_modify {
+    border: 1px solid #3552a4;
+    color: #3552a4;
+}
+
+.btn_remove {
+    border: 1px solid #333;
+    color: #333;
+}
+
+.btn_more {
+    background-color: #3552a4;
+    color: #fff;
 }
 
 .btn_home {
     display: none;
+}
+
+.no-post {
+    position: relative;
+    height: 200px;
+    background-color: #fff !important;
+
+    > td {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
 
 // 반응형

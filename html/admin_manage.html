@@ -24,12 +24,14 @@
                     <li><a href="../html/admin_home.html">Home</a></li>
                     <li><a href="../html/admin_manage.html" class="on">게시물관리</a></li>
                     <li><a href="../html/admin_award.html">수상작</a></li>
+                    <li><a href="../html/admin_visit.html">접속통계</a></li>
                 </ul>
             </nav>
             <ul class="tabs">
                 <li class="tab-link current" data-tab="tab-1">Q & A</li>
                 <li class="tab-link" data-tab="tab-2">공지사항</li>
                 <li class="tab-link" data-tab="tab-3">FAQ</li>
+                <li class="tab-link" data-tab="tab-4">작품접수관리</li>
             </ul>
         </header>
         <main role="main">
@@ -141,7 +143,7 @@
                 </table>
                 <footer class="table_footer">
                     <button class="btn_delete_select">선택 삭제</button>
-                    <div class="paginator">
+                    <div class="pagination">
                         <a href="#" class="prev"><</a>
                         <a href="#" class="page active">1</a>
                         <a href="#" class="page">2</a>
@@ -260,7 +262,7 @@
                 </table>
                 <footer class="table_footer">
                     <button class="btn_delete_select">선택 삭제</button>
-                    <div class="paginator">
+                    <div class="pagination">
                         <a href="#" class="prev"><</a>
                         <a href="#" class="page active">1</a>
                         <a href="#" class="next">></a>
@@ -376,13 +378,155 @@
                 </table>
                 <footer class="table_footer">
                     <button class="btn_delete_select">선택 삭제</button>
-                    <div class="paginator">
+                    <div class="pagination">
                         <a href="#" class="prev"><</a>
                         <a href="#" class="page active">1</a>
                         <a href="#" class="next">></a>
                     </div>
                     <button class="btn_write">작성하기</button>
                 </footer>
+            </div>
+            <div id="tab-4" class="tab-content">
+                <h2 class="title">작품접수관리</h2>
+                <select name="typeAward" class="select_award">
+                    <option value="로고송 부문 관리">로고송 부문 관리</option>
+                    <option value="동영상 부문 관리" selected="">동영상 부문 관리</option>
+                </select>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th width="10%">등록일</th>
+                            <td>
+                                <input type="date" id="start" name="trip-start" value="2023-04-29" min="2023-04-29" max="2023-04-31" />
+                                ~
+                                <input type="date" id="start" name="trip-start" value="2023-04-29" min="2023-04-29" max="2023-04-31" />
+                            </td>
+                        </tr>
+                    </thead>
+                </table>
+                <div class="form_search">
+                    <select>
+                        <option value="신청자">신청자</option>
+                        <option value="작품명">작품명</option>
+                    </select>
+                    <form><input type="text" name="search" value="" /></form>
+                    <button class="button">검색</button>
+                    <button class="button">초기화</button>
+                </div>
+                <div class="result">
+                    <p>전체 <strong>24</strong>건의 게시물이 검색되었습니다.</p>
+
+                    <select name="pageSize" class="page_size">
+                        <option value="10">10줄씩 보기</option>
+                        <option value="20" selected="">20줄씩 보기</option>
+                        <option value="30">30줄씩 보기</option>
+                        <option value="50">50줄씩 보기</option>
+                    </select>
+                </div>
+                <table class="results">
+                    <colgroup>
+                        <col width="5%" />
+                        <col width="5%" />
+                        <col width="10%" />
+                        <col width="10%" />
+                        <col />
+                        <col width="5%" />
+                        <col width="10%" />
+                        <col width="10%" />
+                        <col width="5%" />
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="select">
+                                <input type="checkbox" name="check1" id="check1" />
+                            </th>
+                            <th scope="col" class="number">순번</th>
+                            <th scope="col" class="number">접수번호</th>
+                            <th scope="col" class="number">공모부문</th>
+                            <th scope="col">작품명</th>
+                            <th scope="col">작성자</th>
+                            <th scope="col">연락처</th>
+                            <th scope="col">접수일</th>
+                            <th scope="col">관리</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" name="check1" id="check1" /></td>
+                            <td>40</td>
+                            <td>627948B7</td>
+                            <td>개인</td>
+                            <td>우리 나라의 바이오 헬스 산업</td>
+                            <td>윤상원</td>
+                            <td>010-1234-1234</td>
+                            <td>23-05-14</td>
+                            <td>
+                                <a class="view">보기</a>
+                                <a class="delete">삭제</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <footer class="table_footer">
+                    <button class="btn_delete_select">선택 삭제</button>
+                    <div class="pagination">
+                        <a href="#" class="prev"><</a>
+                        <a href="#" class="page active">1</a>
+                        <a href="#" class="page">2</a>
+                        <a href="#" class="page">3</a>
+                        <a href="#" class="page disabled">4</a>
+                        <a href="#" class="page disabled">5</a>
+                        <a href="#" class="next">></a>
+                    </div>
+                    <button class="btn_download all">전체파일다운</button>
+                    <button class="btn_download excel">엑셀다운</button>
+                </footer>
+            </div>
+            <div id="qna_check" class="dimmed_layer">
+                <div class="area_content">
+                    <h2 class="blind">공지사항</h2>
+                    <div class="layer_content">
+                        <div class="layer_content_header">
+                            <strong class="title ellipsis">공지사항레이어타이틀긴타입테스트일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십 </strong>
+                            <p class="register_date">등록일 : <span class="date">23-04-29</span></p>
+                        </div>
+                        <div class="layer_content_body">
+                            <p>안녕하세요.</p>
+                            <p>QNA 질문입니다.QNA 질문입니다.QNA 질문입니다.QNA 질문입니다.QNA 질문입니다.QNA 질문입니다.QNA 질문입니다.QNA 질문입니다.</p>
+                            <p>QNA 질문입니다.QNA 질문입니다.QNA 질문입니다.QNA 질문입니다.QNA 질문입니다.QNA 질문입니다.</p>
+                            <!-- 답변 -->
+                            <div class="answer_wrap">
+                                <strong>답변</strong>
+                                <p>안녕하세요. 공모전 운영사무국입니다.</p>
+                                <br />
+                                <p>해당 심사는 관련 분야 전문가분들이 모여서 공정한 심사를 거쳐 진행되었습니다.</p>
+                                <br />
+                                <p>감사합니다.</p>
+                            </div>
+                        </div>
+                        <!-- 답변 버튼 클릭 시 나올 답변 textarea -->
+                        <textarea name="textarea_answer" id="textarea_answer" class="textarea_answer" rows="5"></textarea>
+                    </div>
+                    <div class="wrap_btn">
+                        <button type="button" class="btn_answer" onclick="hideLayer()">답변 제출</button>
+                        <button type="button" class="btn_answer" onclick="hideLayer()">답변</button>
+                        <button type="button" class="btn_remove" onclick="hideLayer()">삭제</button>
+                        <button type="button" class="btn_more" onclick="hideLayer()">목록</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 공지사항 작성 모달 -->
+            <div id="qna_check" class="dimmed_layer">
+                <div class="area_content">
+                    <h2 class="blind">공지사항</h2>
+                    <p class="notice_text"><em class="point_color">*</em>표시는 필수 입력 항목입니다.</p>
+                    <div class="layer_content">여기에 외부 에디터를 넣어주세요.</div>
+                    <div class="wrap_btn">
+                        <button class="btn_cancel">취소</button>
+                        <button class="btn_submit">작성하기</button>
+                    </div>
+                </div>
             </div>
         </main>
 

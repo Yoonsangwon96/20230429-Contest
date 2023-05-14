@@ -108,6 +108,7 @@
                                     <button>
                                         <span>예비 수상작 결과발표</span>
                                         <img class="lock icon" src="https://biosong-promotion.s3.ap-northeast-2.amazonaws.com/icon_lock.png" alt="lock" />
+                                        <img class="new icon" src="/img/icon_new.png" alt="new" />
                                     </button>
                                 </td>
                                 <td>23-02-10</td>
@@ -153,19 +154,19 @@
                     </table>
 
                     <div class="pagination">
-                        <a href="#"><</a>
-                        <a href="#" class="active">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <a href="#">5</a>
-                        <a href="#">6</a>
-                        <a href="#">7</a>
-                        <a href="#">8</a>
-                        <a href="#">9</a>
-                        <a href="#">10</a>
-                        <a href="#">></a>
-                        <button class="btn_write">글쓰기</button>
+                        <button type="button" disabled><</button>
+                        <button type="button" class="active">1</button>
+                        <button type="button">2</button>
+                        <button type="button">3</button>
+                        <button type="button">4</button>
+                        <button type="button">5</button>
+                        <button type="button">6</button>
+                        <button type="button">7</button>
+                        <button type="button">8</button>
+                        <button type="button">9</button>
+                        <button type="button">10</button>
+                        <button type="button" disabled>></button>
+                        <button type="button" class="btn_write">글쓰기</button>
                     </div>
                 </div>
 
@@ -232,6 +233,132 @@
                     <button class="btn_submit">작성하기</button>
                 </div>
             </div>
+
+            <!-- 비밀번호 입력 레이어 -->
+            <div id="password" class="dimmed_layer">
+                <div class="area_content">
+                    <h2 class="blind">비밀번호 입력</h2>
+                    <div class="layer_content">
+                        <div class="layer_content_body">
+                            <strong class="title">비밀번호를 입력해주세요.</strong>
+                            <input type="password" class="input_password" name="qna_password" id="qna_password" />
+                        </div>
+                    </div>
+                    <div class="wrap_btn">
+                        <button type="button" class="btn_cancel" onclick="hideLayer()">취소</button>
+                        <button type="button" class="btn_more">확인</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- qna 확인창 -->
+            <!-- [D] qna 레이어는 qna 클래스 추가 -->
+            <div id="qna_check" class="dimmed_layer qna">
+                <div class="area_content">
+                    <h2 class="blind">공지사항</h2>
+                    <div class="layer_content">
+                        <div class="layer_content_header">
+                            <strong class="title ellipsis">공지사항레이어타이틀긴타입테스트일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십 </strong>
+                            <p class="register_date">등록일 : <span class="date">23-04-29</span></p>
+                        </div>
+                        <div class="layer_content_body">
+                            <p>안녕하세요.</p>
+                            <p>QNA 질문입니다.QNA 질문입니다.QNA 질문입니다.QNA 질문입니다.QNA 질문입니다.QNA 질문입니다.QNA 질문입니다.QNA 질문입니다.</p>
+                            <p>QNA 질문입니다.QNA 질문입니다.QNA 질문입니다.QNA 질문입니다.QNA 질문입니다.QNA 질문입니다.</p>
+                            <!-- 답변 -->
+                            <div class="answer_wrap">
+                                <strong>답변</strong>
+                                <p>안녕하세요. 공모전 운영사무국입니다.</p>
+                                <br />
+                                <p>해당 심사는 관련 분야 전문가분들이 모여서 공정한 심사를 거쳐 진행되었습니다.</p>
+                                <br />
+                                <p>감사합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrap_btn">
+                        <button type="button" class="btn_modify" onclick="hideLayer()">수정</button>
+                        <button type="button" class="btn_remove" onclick="hideLayer()">삭제</button>
+                        <button type="button" class="btn_more" onclick="hideLayer()">목록</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- qna 수정창 -->
+            <!-- [D] qna 레이어는 qna 클래스 추가 -->
+            <div id="qna_modify" class="dimmed_layer qna">
+                <div class="area_content">
+                    <h2 class="blind">공지사항</h2>
+                    <div class="layer_content">
+                        <p class="notice_text"><em class="point_color">*</em>표시는 필수 입력 항목입니다.</p>
+                        <div class="table_answer">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">
+                                            <span class="required" id="nameField">
+                                                <em class="point_color">*</em>
+                                                이름
+                                            </span>
+                                        </th>
+                                        <td>
+                                            <div class="text-input-wrapper">
+                                                <input type="text" name="author" maxlength="25" placeholder="" value="" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <span class="required">
+                                                <em class="point_color">*</em>
+                                                제목
+                                            </span>
+                                        </th>
+                                        <td>
+                                            <div>
+                                                <input type="text" name="title" maxlength="100" id="" value="" />
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">
+                                            <span class="required">
+                                                <em class="point_color">*</em>
+                                                내용
+                                            </span>
+                                        </th>
+                                        <td>
+                                            <textarea name="text"></textarea>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <button type="button" class="btn_cancel" onclick="hideLayer()">취소</button>
+                        <button type="button" class="btn_more">수정하기</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 공지사항 레이어 -->
+            <div id="notice" class="dimmed_layer">
+                <div class="area_content">
+                    <h2 class="blind">공지사항</h2>
+                    <div class="layer_content">
+                        <div class="layer_content_header">
+                            <strong class="title ellipsis">공지사항레이어타이틀긴타입테스트일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십 </strong>
+                            <p class="register_date">등록일 : <span class="date">23-04-29</span></p>
+                        </div>
+                        <div class="layer_content_body">
+                            <p>안녕하세요.</p>
+                            <p>현재 예비 수상작들이 선정되어, 해당 결과를 홈페이지 우측 상단<br />'수상작' -> '표절신고' 페이지를 통해 확인이 가능합니다.</p>
+                            <p>표절신고 기간 이후, 최종 수상작들이 선정될 예정이며,<br />표절신고는 2.10(금) ~ 2.17(금)까지 진행 될 예정입니다.</p>
+                            <p>많은 관심 부탁드립니다.</p>
+                        </div>
+                    </div>
+                    <button type="button" class="btn_more" onclick="hideLayer()">목록</button>
+                </div>
+            </div>
         </main>
         <footer>
             <div class="content_inner">
@@ -284,9 +411,8 @@
             notice.style.display = "block";
         }
 
-        function hideNotice() {
-            var notice = document.getElementById("notice");
-            notice.style.display = "none";
-        }
+        $(".dimmed_layer").click(function () {
+            $(this).hide();
+        });
     </script>
 </html>

@@ -92,6 +92,21 @@
                         <button class="btn_search">검색</button>
                     </div>
 
+                    <!-- 검색된 게시물 없음 -->
+                    <table class="table_notice">
+                        <thead>
+                            <tr>
+                                <th class="number">번호</th>
+                                <th class="table_title">제목</th>
+                                <th class="date">등록일</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="no-post">
+                                <td>검색된 게시물이 없습니다.</td>
+                            </tr>
+                        </tbody>
+                    </table>
                     <table class="table_notice">
                         <thead>
                             <tr>
@@ -126,18 +141,18 @@
                     </table>
 
                     <div class="pagination">
-                        <a href="#"><</a>
-                        <a href="#" class="active">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <a href="#">5</a>
-                        <a href="#">6</a>
-                        <a href="#">7</a>
-                        <a href="#">8</a>
-                        <a href="#">9</a>
-                        <a href="#">10</a>
-                        <a href="#">></a>
+                        <button type="button" disabled><</button>
+                        <button type="button" class="active">1</button>
+                        <button type="button">2</button>
+                        <button type="button">3</button>
+                        <button type="button">4</button>
+                        <button type="button">5</button>
+                        <button type="button">6</button>
+                        <button type="button">7</button>
+                        <button type="button">8</button>
+                        <button type="button">9</button>
+                        <button type="button">10</button>
+                        <button type="button" disabled>></button>
                     </div>
                 </div>
             </div>
