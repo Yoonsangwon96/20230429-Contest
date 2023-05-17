@@ -174,6 +174,12 @@ main {
         margin: 0 12px 10px 0;
         background-size: contain;
         vertical-align: top;
+        transition: transform 0.5s;
+
+        &:hover {
+            transition: transform 0.5s;
+            transform: scale(1.2);
+        }
     }
 
     a {
@@ -206,6 +212,12 @@ main {
     height: 180px;
     background: url(../img/banner_award.png) no-repeat;
     vertical-align: top;
+    transition: transform 0.5s;
+
+    &:hover {
+        transition: transform 0.5s;
+        transform: scale(1.2);
+    }
 
     > a {
         display: inline-block;
@@ -506,8 +518,9 @@ footer {
 
 .no-post {
     position: relative;
-    height: 200px;
+    height: 28.6vw;
     background-color: #fff !important;
+    box-sizing: border-box;
 
     > td {
         position: absolute;
@@ -530,7 +543,9 @@ footer {
 
     // 홈 화면
     .main_content {
-        min-height: 100%;
+        height: 134.3vw;
+        min-height: initial;
+        padding-bottom: 7.14vw;
 
         > .content_inner {
             display: flex;
@@ -562,6 +577,7 @@ footer {
 
     .mobile_image {
         display: block;
+        margin: 0 auto;
 
         + img {
             display: none;
@@ -584,11 +600,33 @@ footer {
     }
 
     .area_content_link {
+        display: flex;
         flex: 1 0 auto;
+        flex-wrap: wrap;
+
+        > li {
+            flex: 1 1 50%;
+            height: 12.9vw;
+            margin: 0;
+
+            &:hover {
+                transform: none;
+            }
+        }
+    }
+
+    .banner_qna,
+    .banner_download {
+        margin-top: 5px !important;
     }
 
     .link_banner {
         display: block;
+        flex: 0 0 auto;
+        width: 26.51vw;
+        height: 26.51vw;
+        background-size: contain;
+        transform: none !important;
     }
 
     .main_content {
@@ -634,16 +672,10 @@ footer {
 
     .content_link_wrap {
         display: flex;
-    }
-
-    .area_content_link {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .area_content_link li {
-        height: auto;
-        flex-basis: 26vw;
+        align-items: center;
+        justify-content: center;
+        width: 105%;
+        margin-left: -2.6vw;
     }
 
     .sub_menu {
@@ -663,14 +695,14 @@ footer {
                 display: inline-block;
                 position: relative;
                 height: 30px;
-                padding-left: 90px;
+                padding-left: 62px;
                 font-size: 18px;
                 color: #464646;
 
                 &:after {
                     position: absolute;
                     top: 8px;
-                    left: 80px;
+                    left: 50px;
                     width: 6px;
                     height: 2px;
                     background-color: #9d9b99;
@@ -681,14 +713,9 @@ footer {
         }
     }
 
-    .link_banner {
-        width: 25.71vw;
-        height: 25.71vw;
-        background-size: contain;
-    }
-
     .btn_home {
         display: inline-block;
+        flex: 0 0 50px;
         width: 50px;
         height: 50px;
         margin-left: auto;
@@ -707,23 +734,36 @@ footer {
     }
 
     footer {
-        display: none;
+        .content_inner {
+            flex-direction: column;
+            align-items: center;
+            padding: 10px 30px 20px;
+        }
+    }
+
+    .footer_text p + p {
+        margin-top: 15px;
+    }
+
+    .footer_link_list {
+        margin: 25px 0 0;
+        margin-left: 0;
+
+        > li {
+            margin-left: 0;
+        }
     }
 
     .hamburger-menu {
+        display: inline-block;
+        flex: 0 0 auto;
         width: 36px;
-        height: 4px;
-        margin: -30px 0 0 30px;
-        background-color: #ccc;
+        height: 36px;
+        margin: 8px 0 0 30px;
+        background: url(../img/icon_menu.png) no-repeat;
+        background-size: contain;
+        vertical-align: top;
         cursor: pointer;
-
-        .line {
-            display: block;
-            width: 100%;
-            height: 6px;
-            margin-bottom: 8px;
-            background-color: #ccc;
-        }
     }
 
     .close-button {
@@ -787,13 +827,19 @@ footer {
     .box_state {
         width: 10%;
     }
+
+    .table_accept_check {
+        th {
+            width: 40% !important;
+        }
+    }
+
+    .table_text {
+        margin-left: 0 !important;
+    }
 }
 
 @media (max-width: 500px) {
-    .area_content_link li {
-        flex-basis: 24vw;
-    }
-
     .app_table {
         input[type="date"] {
             width: 100%;
