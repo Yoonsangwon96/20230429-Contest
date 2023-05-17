@@ -174,11 +174,11 @@ main {
         margin: 0 12px 10px 0;
         background-size: contain;
         vertical-align: top;
-        transition: transform 0.5s;
+        transition: opacity 0.5s;
 
         &:hover {
-            transition: transform 0.5s;
-            transform: scale(1.2);
+            opacity: 0.5;
+            transition: opacity 0.5s;
         }
     }
 
@@ -212,11 +212,11 @@ main {
     height: 180px;
     background: url(../img/banner_award.png) no-repeat;
     vertical-align: top;
-    transition: transform 0.5s;
+    transition: opacity 0.5s;
 
     &:hover {
-        transition: transform 0.5s;
-        transform: scale(1.2);
+        opacity: 0.5;
+        transition: opacity 0.5s;
     }
 
     > a {
@@ -310,12 +310,14 @@ main {
 
 footer {
     min-height: 120px;
-    padding-top: 20px;
     background-color: #dbdbdb;
     font-size: 14px;
 
     > .content_inner {
         display: flex;
+        align-items: center;
+        height: 100%;
+        box-sizing: border-box;
     }
 }
 
@@ -341,6 +343,7 @@ footer {
     }
 
     img {
+        width: 90%;
         opacity: 0.8;
         filter: grayscale(100%);
     }
@@ -567,9 +570,14 @@ footer {
 
     .title.about {
         + .content_wrap {
+            margin-right: 0vw;
+            margin-left: 0vw;
+            padding-right: 0vw;
+            padding-left: 0vw;
+
             .mobile_image {
                 margin: 0 auto;
-                padding: 7.14vw 7.14vw 14.28vw;
+                padding: 0 7.14vw;
                 box-sizing: border-box;
             }
         }
@@ -736,8 +744,9 @@ footer {
     footer {
         .content_inner {
             flex-direction: column;
-            align-items: center;
+            align-items: baseline;
             padding: 10px 30px 20px;
+            padding-top: 20px;
         }
     }
 
